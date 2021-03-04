@@ -5,7 +5,8 @@
 <title>Amazoncar Api Start</title>
 </head>
 <body>
-	<header></header>
+	<%@ include file="/header.jsp" %>
+
 	<nav></nav>
 	<article>Amazoncar Api Start</article>
 	<footer></footer>
