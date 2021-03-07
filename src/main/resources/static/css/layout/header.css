@@ -1,0 +1,31 @@
+.navbar-bg {
+    background: #fff;
+    padding:10px;
+}   
+   
+.navbar {
+    border-bottom: 0;
+    box-shadow: 0 0 2rem 0 rgb(41 48 66 / 10%);
+}
+
+.navbar-expand {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+#menucheck{
+	display:none;
+}
+
+#menuicon {
+	cursor: pointer;	
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.header-wrap{
+	display: inline-flex;
+}
+
