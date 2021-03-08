@@ -47,7 +47,8 @@ body {
 		</header>
 	
 		<div id="content" >
-		 	<tiles:insertAttribute name="body"/>
+			 	<tiles:insertAttribute name="body"/>
+			</div>
 		</div>
 	
 	<%-- 	<div style="background-color: blue; width:100%">

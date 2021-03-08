@@ -12,6 +12,11 @@
     flex-flow: row nowrap;
     justify-content: flex-start;
 }
+
+/* hearder layout  */
+
+
+
 #menucheck{
 	display:none;
 }
@@ -25,7 +30,79 @@ a {
   text-decoration: none;
 }
 
-.header-wrap{
-	display: inline-flex;
+
+/*드랍메뉴 layout*/
+#dropContent{
+	display: flex;
+	flex-direction: column; 
+	width:170px;
+	
 }
+#dropContent span:nth-child(1){
+	text-align:right;
+	flex-shrink: 0;
+	width: 20%;
+	
+}
+#dropContent span:nth-child(2){
+	padding-left:10px;
+	flex-shrink: 0;
+	width: 70%;
+	
+}
+#dropContent span:nth-child(3){
+	flex-grow: 1;
+	
+}
+
+
+/*드랍버튼  */
+#dropBtn{
+	display: flex;
+	justify-content: space-between; 
+	width:100%;
+	padding:5px;
+	cursor:pointer;
+	/* background-color: #293042; */
+	border-radius: 3px;
+}
+
+
+#dropmenu{
+	display: flex;
+	flex-direction: column;
+	background-color: #293042;
+	line-height:40px;
+	border: 1px solid hsla(0,0%,100%,.15);
+	border-radius: 3px;
+	height:0;	
+	width:100%;
+	display:none;
+ 	transition:all .35s;
+	
+	
+}
+
+
+#dropmenu li{
+	border-bottom:1px solid rgba(225,255,255,0.1);
+}
+
+#dropmenu li a{
+	border-bottom:1px solid rgba(225,255,255,0.1);
+	padding-left:20px;
+}
+
+
+#dropmenu a{
+	color:white;
+	line-height:35px;
+}
+
+#dropmenu.show{
+	height:auto;	
+	display:block;
+	transition:all .35s;
+}
+
 

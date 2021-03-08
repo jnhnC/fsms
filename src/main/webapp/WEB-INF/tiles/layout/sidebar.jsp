@@ -16,7 +16,7 @@
 	            		<span><i class="bi bi-caret-up-fill"></i></span>
 	            	</a>
 	            	<ul id="" class="sidebar-dropdown" style="">
-						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴1</a></li>
+						<li class="sub-item"><a class="sidebar-link" onclick="acyncMovePage('/1')">세부메뉴1</a></li>
 						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴2</a></li>
 						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴3</a></li>
 						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴4</a></li>
@@ -72,9 +72,9 @@ function acyncMovePage(url){
     
     $.ajax(ajaxOption).done(function(data){
         // Contents 영역 삭제
-        $('#wrapper').children().remove();
+        $('#content').children().remove();
         // Contents 영역 교체
-        $('#wrapper').html(data);
+        $('#content').html(data);
     });
 }
 
@@ -84,8 +84,16 @@ $('.sidebar-link').click(function(){
 });
 
 $('.sidebar-item').click(function(){
-	$(this).addClass("active").siblings().removeClass("active");
+ 	 $(this).addClass("active").siblings().removeClass("active");  
+	
 });
+ 
+$('.sub-item').click(function(){
+	$('.sub-item').siblings().removeClass("active");
+ 	$(this).addClass("active");
+});
+
+
 
 
 </script>

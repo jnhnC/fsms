@@ -12,9 +12,10 @@ public class HomeController {
 	}
 	
 
-	@GetMapping("/1")
+	@GetMapping("/tiles/1")
 	public String test1() {
-		return "main/test1";
+		System.out.println("TEST");
+		return "tiles/test1.tiles";
 	}
 	
 

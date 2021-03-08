@@ -40,11 +40,13 @@
 	border-bottom:1px solid rgba(225,255,255,0.1);
 }
 
-.sidebar-menu ul li.active a{
+/*그룹또는서브메뉴 선택시 해당 그룹전체 이벤트   */
+.sidebar-menu ul li.active>a{
 	color : white;
 	background:#1e1e1e;
 	border-left-color: white;
 }
+
 
 .sidebar-menu ul ul{
 	position :  static;
@@ -60,13 +62,26 @@
 	padding-left:60px;
 }
 
-.sidebar-menu ul li.active ul li a{
-	color : white;
-	background:#1b1b1b;
-	border-left-color: transparent;
+/*그룹메뉴 클릭시 서브메뉴 상태  */
+ .sidebar-menu ul li.active ul li a{
+	 color : rgba(233,236,239,.5);
+	background: #293042;
+	border-left-color: transparent; 
+}
+ 
+/*서브메뉴 마우스 오버시  */
+ .sidebar-menu ul ul li a:hover{ 
+	color : white!important;
+	background: #1e1e1e!important;
 }
 
-
+/*서브메뉴 마우스 클릭시  */
+ .sidebar-menu ul ul li.active a{
+	 color : white!important;
+	/* background: #1e1e1e!important;  */
+	
+}
+ 
  .sidebar-menu ul li a span:nth-child(2){
 	position :absolute;
 	right:20px;

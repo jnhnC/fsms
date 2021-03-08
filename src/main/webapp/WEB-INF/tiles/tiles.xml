@@ -17,14 +17,18 @@
     </definition>
 
     <!-- Header / Footer가 들어간 기본 화면 -->
-    <definition name="main" template="/WEB-INF/tiles/layout/main.jsp">
+    <definition name="layout" template="/WEB-INF/tiles/layout/main.jsp">
         <put-attribute name="header" value="/WEB-INF/tiles/layout/header.jsp" />
         <put-attribute name="sidebar" value="/WEB-INF/tiles/layout/sidebar.jsp" />
         <put-attribute name="body" value="" />
         <!-- <put-attribute name="footer" value="/WEB-INF/tiles/layout/footer.jsp" /> -->
     </definition>
 
-    <definition name="*/*" extends="main">
+    <definition name="*/*" extends="layout">
+        <put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
+    </definition>
+    
+      <definition name="*/*.tiles" extends="layout">
         <put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
     </definition>
 </tiles-definitions>

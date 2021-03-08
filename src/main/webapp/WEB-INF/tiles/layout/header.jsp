@@ -1,18 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-	<nav class="navbar navbar-expand navbar-light navbar-bg">
-		<div class="header-wrap">
-			<div id="menuicon" onClick="activeMenu();">
-				<i class="bi bi-list h2"></i>
-			</div>
-			<div>
-					2				
-			</div>
-			<div style="text-align:right;">
-				3
-			</div>
+	<nav class="navbar navbar-light bg-light justify-content-between">
+		<div id="menuicon" onClick="activeMenu();">
+			<i class="bi bi-list h2"></i>
 		</div>
 		
+		<div>
+			<div id="dropContent">
+				<div id="dropBtn" class="dropBtn dropBtnBox">
+					<span class="dropBtnBox"><i class="bi bi-person-circle"></i></span>
+					<span class="dropBtnBox">최진형</span>
+					<span ><i class="bi bi-caret-down-fill dropBtnBox"></i></span>
+				</div>
+				<ul id="dropmenu" >
+					<li> <a class="" href="#">암호변경</a></li>
+					<li> <a class="" href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</div>
 	</nav>
 	
 	
@@ -28,8 +33,21 @@
 			$("#sidebar").css("width","200px");
 			activemenu = 0;
 		}
-	
 	}
+
+	$('#dropBtn').click(function(){
+		$('#dropmenu').toggleClass("show");
+	});
+
+	$(document).click(function(e){
+		if (!$(e.target).hasClass("dropBtnBox")) { 
+			if($('#dropmenu').hasClass("show")){
+				 $('#dropmenu').removeClass("show");
+			}
+	   	}
+	    
+	});
+	
 </script>	
 	
 	
