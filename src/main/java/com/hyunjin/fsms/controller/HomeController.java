@@ -6,16 +6,32 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
+	
 	@GetMapping("/")
+	public String login() {
+		return "main/login";
+	}
+	
+	@GetMapping("/test")
+	public String test() {
+		return "main/test";
+	}
+	
+	@GetMapping("/main")
 	public String index() {
+		return "layout/main";
+	}
+	
+	@GetMapping("/home")
+	public String home() {
 		return "main/index";
 	}
 	
+	
 
-	@GetMapping("/tiles/1")
+	@GetMapping("/1")
 	public String test1() {
-		System.out.println("TEST");
-		return "tiles/test1.tiles";
+		return "main/test1";
 	}
 	
 

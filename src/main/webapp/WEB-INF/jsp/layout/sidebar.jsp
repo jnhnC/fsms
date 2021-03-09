@@ -2,9 +2,8 @@
 	<nav class="nav-side" >
 		<div>
 			<div class="sidebar-brand">
-		      <div class="align-middle">
-		      	<img src="/images/icon_logo.png"  width="60" height="50"></span>
-		      </div>
+		      <div class="align-middle"><img src="/images/icon_logo.png"></img></div>
+		      <div id="band-text"> 현진시닝</div>
 		    </div>
 		    
 		    
@@ -12,46 +11,39 @@
 			<ul>
 				<li class="sidebar-item">
 					<a href="#" class="sidebar-link">
-		              	<span class="align-middle"><i class="bi bi-layout-text-sidebar"></i> 그룹메뉴1</span>
+		              	<span class="align-middle"><i class="bi bi-layout-text-sidebar"></i> 기본메뉴 </span>
 	            		<span><i class="bi bi-caret-up-fill"></i></span>
 	            	</a>
 	            	<ul id="" class="sidebar-dropdown" style="">
-						<li class="sub-item"><a class="sidebar-link" onclick="changeContents('/1')">세부메뉴1</a></li>
-						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴2</a></li>
-						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴3</a></li>
-						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴4</a></li>
-						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴5</a></li>
+						<li class="sub-item"><a class="sidebar-link" onclick="changeContents('/1')">팀장배정</a></li>
+						<li class="sub-item"><a class="sidebar-link" onclick="changeContents('/2')">상품조회</a></li>
+						<li class="sub-item"><a class="sidebar-link" onclick="changeContents('/3')">출고처리</a></li>
+						<li class="sub-item"><a class="sidebar-link" onclick="changeContents('/4')">고객상담</a></li>
 					</ul>
 	            	
 				</li>
 				<li class="sidebar-item">
 					<a href="#" class="sidebar-link">
-		              	<span class="align-middle"><i class="bi bi-truck"></i>그룹메뉴2</span>
+		              	<span class="align-middle"><i class="bi bi-truck"></i>PKG</span>
 		              	<span><i class="bi bi-caret-up-fill"></i></span>
 	            	</a>
 	            	<ul id="" class="sidebar-dropdown" style="">
-						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴1</a></li>
-						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴2</a></li>
-						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴3</a></li>
-						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴4</a></li>
-						<li class="sub-item"><a class="sidebar-link" href="#">세부메뉴5</a></li>
+						<li class="sub-item"><a class="sidebar-link" href="#">상당등록</a></li>
+						<li class="sub-item"><a class="sidebar-link" href="#">FD일지</a></li>
+						<li class="sub-item"><a class="sidebar-link" href="#">관리등록</a></li>
+						<li class="sub-item"><a class="sidebar-link" href="#">추가판매</a></li>
 					</ul>
 	            	
 				</li>
 				<li class="sidebar-item">
 					<a href="#" class="sidebar-link">
-		              	<span class="align-middle"><i class="bi bi-calendar2-fill"></i> 그룹메뉴3</span>
+		              	<span class="align-middle"><i class="bi bi-calendar2-fill"></i>지원</span>
 	            	</a>
-				</li>
-				<li class="sidebar-item">
-					<a href="#" class="sidebar-link">
-		              	<span class="align-middle"><i class="bi bi-sliders"></i> 그룹메뉴4</span>
-	            	</a>
-				</li>
-				<li class="sidebar-item">
-					<a href="#" class="sidebar-link">
-		              	<span class="align-middle"><i class="bi bi-pencil-square"></i> 그룹메뉴5</span>
-	            	</a>
+	            	<ul id="" class="sidebar-dropdown" style="">
+						<li class="sub-item"><a class="sidebar-link" href="#">고객상담</a></li>
+						<li class="sub-item"><a class="sidebar-link" href="#">상담등록</a></li>
+						<li class="sub-item"><a class="sidebar-link" href="#">FD일지</a></li>
+					</ul>
 				</li>
 				
 			</ul>

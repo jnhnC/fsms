@@ -1,3 +1,33 @@
+body {
+	font-family: 'GoyangIlsan', sans-serif;
+}
+
+.header-contents{
+	width:100%;
+	display:flex;
+}
+
+
+.hearder-item:nth-child(1) {
+	flex-basis: 5%;
+}
+
+.hearder-item:nth-child(2) {
+	flex-basis: 80%;
+	
+}
+
+.hearder-item:nth-child(3) {
+	flex-basis: 5%;
+	display:flex;
+}
+
+#homeBtn{
+	font-size:14pt;
+	cursor:pointer;
+}
+
+
 .navbar-bg {
     background: #fff;
     padding:10px;
@@ -22,7 +52,8 @@
 }
 
 #menuicon {
-	cursor: pointer;	
+	cursor: pointer;
+	padding-left:10px;	
 }
 
 a {
@@ -36,6 +67,7 @@ a {
 	display: flex;
 	flex-direction: column; 
 	width:170px;
+	padding-right:10px;
 	
 }
 #dropContent span:nth-child(1){
@@ -61,12 +93,14 @@ a {
 	display: flex;
 	justify-content: space-between; 
 	width:100%;
-	padding:5px;
+	padding-left:10px;
 	cursor:pointer;
 	/* background-color: #293042; */
 	border-radius: 3px;
 }
-
+#dropBtn span:nth-child(1){
+	font-size:14pt;	
+}
 
 #dropmenu{
 	display: flex;

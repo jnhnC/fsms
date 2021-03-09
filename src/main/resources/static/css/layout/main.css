@@ -18,4 +18,15 @@
     min-height: 100vh;
     min-width: 0;
     flex-direction: column;
+    background-color:#f8f9fa!important;
+
+    
+}
+
+
+#content{
+    padding:2%;
+    background-color:#f7f9fc;
+    height:100%;
+    font-size:11pt;
 }

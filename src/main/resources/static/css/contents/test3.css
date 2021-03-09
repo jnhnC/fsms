@@ -1,0 +1,24 @@
+
+
+.tab-content{
+	padding:20px 0px;
+}
+
+.content{
+	display:none;
+}
+
+.content.show{
+	display:block;
+}
+
+.nav-tabs{
+	cursor:pointer;
+}
+
+.tab-content thead th{
+	background-color:#293042;
+	color:white;
+	font-weight:normal;
+}
+
