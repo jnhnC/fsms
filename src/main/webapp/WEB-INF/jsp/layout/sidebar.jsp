@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 	<nav class="nav-side" >
 		<div>
-			<div class="sidebar-brand">
+			<div class="sidebar-brand" onclick="changeContents('/home')">
 		      <div class="align-middle"><img src="/images/icon_logo.png"></img></div>
 		      <div id="band-text"> 현진시닝</div>
 		    </div>
@@ -52,27 +52,6 @@
 	</nav>
 
 <script>
-function acyncMovePage(url){
-    // ajax option
-/*      var ajaxOption = {
-            url : url,
-            async : true,
-            type : "GET",
-            dataType : "html",
-            cache : false
-    };
-    
-    $.ajax(ajaxOption).done(function(data){
-        // Contents 영역 삭제
-        $('#content').children().remove();
-        // Contents 영역 교체
-        $('#content').html(data);
-    });  */
-
-/* 	 $('#content').children().remove();
-     // Contents 영역 교체
-     $('#content').html(url); */
-}
 function changeContents(url){
     $.ajax({
         type        :    "get",
@@ -108,8 +87,19 @@ $('.sidebar-item').click(function(){
 $('.sub-item').click(function(){
 	$('.sub-item').siblings().removeClass("active");
  	$(this).addClass("active");
+ 	$('#menu-nav span').eq(0).html($(this).parents("ul").siblings("a").children("span").text());
+ 	$('#menu-nav span').eq(2).html($(this).find('a').html());
+ 	$('#menu-nav span').css("display","block");
+ 	
 });
 
+
+$('.sidebar-brand').click(function(){
+	$('.sidebar-item').removeClass("active");
+	$('.sub-item').removeClass("active");
+	$('#menu-nav span').css("display","none");
+ 	
+});
 
 
 

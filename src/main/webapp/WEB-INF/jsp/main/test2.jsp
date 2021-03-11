@@ -18,7 +18,7 @@
 	<!-- tab-content 영역이다. -->
 	<div class="tab-content">
 		<div class="content show" id="tab1">
-		<table class="table table-bordered border-secondary">
+		<table class="table" >
 		<thead>
 		    <tr>
 				<th scope="col"></th>
@@ -49,7 +49,7 @@
 		</table>
 			
 		</div>
-		<div class="content" id="tab2">Active2</div>
+		<div class="content" id="tab2">메뉴 상세내용</div>
 		<div class="content" id="tab3">Active3</div>
 	</div>
 </div>

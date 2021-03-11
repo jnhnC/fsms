@@ -1,37 +1,62 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<link href="/css/contents/test3.css" rel="stylesheet" >	    
     
-<link href="/css/contents/test2.css" rel="stylesheet" >	
-
-<div class="title">
-	<h2>세부메뉴 2 </h2>
-	<nav aria-label="breadcrumb">
-  		<ol class="breadcrumb">
-		    <li class="breadcrumb-item"><a href="#">Home</a></li>
-		    <li class="breadcrumb-item"><a href="#">Library</a></li>
-		    <li class="breadcrumb-item active" aria-current="page">Data</li>
-  		</ol>
-	</nav>
-
-</div>
-
-<div class="container">
-	<div class="item">
-		<div class="item-input">
-			 <input type="text" class="form-control" placeholder="name" aria-label="name">
-			 <input type="text" class="form-control" placeholder="age" aria-label="age">
-			 <input type="text" class="form-control" placeholder="company" aria-label="company">
+<div class="tab-wrapper">
+	<!-- tab 영역이다. -->
+	<ul class="nav nav-tabs">
+	  <li class="nav-item">
+	    <a class="nav-link active" >출고 처리</a>
+	  </li>
+	</ul>
+	<!-- tab-content 영역이다. -->
+	<div class="tab-content">
+		<div class="content show" id="tab1">
+		<table class="table">
+		<thead>
+		    <tr>
+				<th scope="col"></th>
+				<th scope="col">지원품목</th>
+				<th scope="col">지원품목내용</th>
+				<th scope="col">비고</th>
+		    </tr>
+	 	</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>특이사항</td>
+					<td>200, 350패키지 상담 가능 / 개인행사대상</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>특이사항</td>
+					<td>200, 350패키지 상담 가능 / 개인행사대상</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td colspan="2"></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+			
 		</div>
+		<div class="content" id="tab2">Active2</div>
+		<div class="content" id="tab3">Active3</div>
 	</div>
-	
-	<div class="item">
-		<div class="item-input">
-		 <input type="text" class="form-control" placeholder="location" aria-label="location">
-		 <input type="text" class="form-control" placeholder="born" aria-label="born">
-		 <input type="text" class="form-control" placeholder="check" aria-label="check">
-		 </div>
-	</div>
-
-
 </div>
+<script>
+	
+	$('.nav-item').click(function(){
+		var tabNth = "tab"+Number($(this).index()+1);
+		var navLinkNth = $(this).index();
+		$(".nav-link").removeClass("active");
+	 	$(".nav-tabs").find("li").eq(navLinkNth).find("a").addClass("active"); 
+		$("#"+tabNth).toggleClass("show").siblings().removeClass("show");  
+	});
+</script>
+
+
+

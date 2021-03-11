@@ -10,6 +10,8 @@ body {
 }
 
 
+
+
 .hearder-item:nth-child(1) {
 	flex-basis: 5%;
 }
@@ -22,6 +24,18 @@ body {
 .hearder-item:nth-child(3) {
 	flex-basis: 5%;
 	display:flex;
+}
+
+
+
+#menu-nav{
+	display:flex;
+}
+
+
+#menu-nav span{
+	padding-right:5px;
+	display:none;
 }
 
 #homeBtn{

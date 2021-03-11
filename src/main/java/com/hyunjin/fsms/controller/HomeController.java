@@ -1,11 +1,20 @@
 package com.hyunjin.fsms.controller;
 
+import java.util.HashMap;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.hyunjin.fsms.service.HomeService;
+
+import lombok.RequiredArgsConstructor;
+
 @Controller
+@RequiredArgsConstructor
 public class HomeController {
 
+	private final HomeService homeService;
 	
 	@GetMapping("/")
 	public String login() {
@@ -13,12 +22,16 @@ public class HomeController {
 	}
 	
 	@GetMapping("/test")
-	public String test() {
+	public String test() throws Exception {
+		String str = homeService.selectTest();
+		System.out.println(str);
 		return "main/test";
 	}
 	
 	@GetMapping("/main")
 	public String index() {
+		
+		
 		return "layout/main";
 	}
 	

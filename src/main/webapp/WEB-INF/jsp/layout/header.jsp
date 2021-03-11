@@ -6,8 +6,10 @@
 				<i class="bi bi-list h2"></i>
 			</div>
 			
-			<div class="hearder-item align-self-center" >
-				<span>기본메뉴</span> > <span>팀장배정</span>
+			<div class="hearder-item align-self-center">
+				<div id="menu-nav">
+					<span>기본메뉴</span><span> ></span><span>팀장배정</span>
+				</div>
 			</div>
 			
 			
@@ -47,6 +49,13 @@
 		$('#dropmenu').toggleClass("show");
 	});
 
+	$('#homeBtn').click(function(){
+		$('.sidebar-item').removeClass("active");
+		$('.sub-item').removeClass("active");
+
+		
+	});
+
 	$(document).click(function(e){
 		if (!$(e.target).hasClass("dropBtnBox")) { 
 			if($('#dropmenu').hasClass("show")){
@@ -57,6 +66,7 @@
 	});
 
 	function changeContents(url){
+		
 	    $.ajax({
 	        type        :    "get",
 	        url : url,
@@ -74,6 +84,8 @@
 	        complete:function(){
 	        }
 	       });
+
+	       
 
 	}
 		

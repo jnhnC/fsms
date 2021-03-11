@@ -18,6 +18,7 @@
     color: #fff;
     display: flex;
     background-color:#FFE65A;
+    cursor:pointer;
    
 }
 .sidebar-brand img{
