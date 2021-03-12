@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.hyunjin.fsms.mapper.HomeMapper">
+<mapper namespace="com.hyunjin.fsms.repository.MainMapper">
 
-    <select id="selectTest"  resultType="String">
+	 <select id="selectMenu" statementType="CALLABLE" resultType="MenuDto">
         <![CDATA[
-         	SELECT menu_id from HJW.dbo.M_MENU mm where mm.Menu_id = 1010
+         	{ CALL HJW.dbo.WSP_ZZ_MENU_FSMS ('221010') }
         ]]>
     </select>
-    
+
+
+
+
 
 </mapper>
 

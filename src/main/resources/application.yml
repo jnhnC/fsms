@@ -6,11 +6,14 @@ spring:
       
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://182.162.91.68:1433;instanceName=master
+    url: jdbc:sqlserver://182.162.91.68:1433;instanceName=HJW
     username: sa
     password: 2017hyunjin81)(*
 
-#
 mybatis:
-  type-aliases-package:  com.hyunjin.fsms.model
+  type-aliases-package:  com.hyunjin.fsms.dto
   mapper-locations: classpath:/mapper/*.xml
+  
+  configuration:
+    map-underscore-to-camel-case: true
+
