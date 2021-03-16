@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link href="/css/contents/test3.css" rel="stylesheet" >	    
-    
+<link href="/css/contents/test3.css" rel="stylesheet" >
+
 <div class="tab-wrapper">
 	<!-- tab 영역이다. -->
 	<ul class="nav nav-tabs">
@@ -41,20 +41,34 @@
 				</tr>
 			</tbody>
 		</table>
-			
+
 		</div>
-		<div class="content" id="tab2">Active2</div>
-		<div class="content" id="tab3">Active3</div>
+
+		<div>
+			<button type="button" class="btn btn-dark" id="qr">QR</button>
+		</div>
 	</div>
 </div>
 <script>
-	
+	$('#qr').click(function(){
+	  if (window.ReactNativeWebView) {
+	    // 모바일이라면 모바일의 카메라 권한을 물어보는 액션을 전달합니다.
+	    window.ReactNativeWebView.postMessage(
+	      JSON.stringify({ type: "REQ_CAMERA_PERMISSION" })
+	    );
+	  } else {
+	    // 모바일이 아니라면 모바일 아님을 alert로 띄웁니다.
+	    alert({ message: ERROR_TYPES.notMobile });
+	  }
+	});
+
+
 	$('.nav-item').click(function(){
 		var tabNth = "tab"+Number($(this).index()+1);
 		var navLinkNth = $(this).index();
 		$(".nav-link").removeClass("active");
-	 	$(".nav-tabs").find("li").eq(navLinkNth).find("a").addClass("active"); 
-		$("#"+tabNth).toggleClass("show").siblings().removeClass("show");  
+	 	$(".nav-tabs").find("li").eq(navLinkNth).find("a").addClass("active");
+		$("#"+tabNth).toggleClass("show").siblings().removeClass("show");
 	});
 </script>
 
