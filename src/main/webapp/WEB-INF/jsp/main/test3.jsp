@@ -62,6 +62,10 @@
 	  }
 	});
 
+	document.addEventListener("message", function(data) {
+		alert(data.data)
+	})
+
 
 	$('.nav-item').click(function(){
 		var tabNth = "tab"+Number($(this).index()+1);

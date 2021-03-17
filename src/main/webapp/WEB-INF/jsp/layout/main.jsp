@@ -43,27 +43,22 @@
 
 
 <body>
-<div id="wrapper" >
-	<label for="menuicon">
-		<div id="sidebar">
-		  <jsp:include page="sidebar.jsp" />
-		</div>
-	</label>
-	<div id="main">
-		<header id="header" >
-	       <jsp:include page="header.jsp" />
-		</header>
-	
-		<div id="content" >
-			 <jsp:include page="<%=contentPage%>" />
+	<div id="wrapper">
+		<label for="menuicon">
+			<div id="sidebar">
+				<jsp:include page="sidebar.jsp" />
+			</div>
+		</label>
+		<div id="main">
+			<header id="header">
+				<jsp:include page="header.jsp" />
+			</header>
+
+			<div id="content">
+				<jsp:include page="<%=contentPage%>" />
 			</div>
 		</div>
-	
-	<%-- 	<div style="background-color: blue; width:100%">
-		    <tiles:insertAttribute name="footer"/>
-		</div> --%>
 	</div>
-</div>
-	
 </body>
 </html>
+
