@@ -23,5 +23,11 @@ public class MainService {
 
 	}
 
+	public String selectSign() {
+		return mapper.selectSign();
+
+	}
+
+
 
 }

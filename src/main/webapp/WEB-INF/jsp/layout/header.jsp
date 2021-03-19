@@ -5,14 +5,14 @@
 			<div class="hearder-item align-self-center" id="menuicon" onClick="activeMenu();">
 				<i class="bi bi-list h2"></i>
 			</div>
-			
+
 			<div class="hearder-item align-self-center">
 				<div id="menu-nav">
 					<span>기본메뉴</span><span> ></span><span>팀장배정</span>
 				</div>
 			</div>
-			
-			
+
+
 			<div class="hearder-item align-self-center" >
 				<div id="homeBtn" onclick="changeContents('/home')"><i class="bi bi-house-door-fill"></i></div>
 				<div id="dropContent">
@@ -29,8 +29,8 @@
 			</div>
 		</div>
 	</nav>
-	
-	
+
+
 <script>
 	activemenu = 0;
 	function activeMenu(){
@@ -53,20 +53,20 @@
 		$('.sidebar-item').removeClass("active");
 		$('.sub-item').removeClass("active");
 
-		
+
 	});
 
 	$(document).click(function(e){
-		if (!$(e.target).hasClass("dropBtnBox")) { 
+		if (!$(e.target).hasClass("dropBtnBox")) {
 			if($('#dropmenu').hasClass("show")){
 				 $('#dropmenu').removeClass("show");
 			}
 	   	}
-	    
+
 	});
 
 	function changeContents(url){
-		
+
 	    $.ajax({
 	        type        :    "get",
 	        url : url,
@@ -85,12 +85,11 @@
 	        }
 	       });
 
-	       
+
 
 	}
-		
 
-	
-</script>	
-	
-	
+
+
+</script>
+

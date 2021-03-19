@@ -3,54 +3,56 @@
 
 <link href="/css/contents/test1.css" rel="stylesheet" >
 
-<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js" rel="nofollow"></script>
-<script type="text/javascript">
-    var scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: false });
-    scanner.addListener('scan',function(content){
-        alert(content);
-        //window.location.href=content;
-    });
-    Instascan.Camera.getCameras().then(function (cameras){
-        if(cameras.length>0){
-            scanner.start(cameras[0]);
-            $('[name="options"]').on('change',function(){
-                if($(this).val()==1){
-                    if(cameras[0]!=""){
-                        scanner.start(cameras[0]);
-                    }else{
-                        alert('No Front camera found!');
-                    }
-                }else if($(this).val()==2){
-                    if(cameras[1]!=""){
-                        scanner.start(cameras[1]);
-                    }else{
-                        alert('No Back camera found!');
-                    }
-                }
-            });
-        }else{
-            console.error('No cameras found.');
-            alert('No cameras found.');
-        }
-    }).catch(function(e){
-        console.error(e);
-        alert(e);
-    });
-</script>
 
-<style>
-#preview{
-   width:500px;
-   height: 500px;
-   margin:0px auto;
-}
-</style>
-<video id="preview"></video>
-<div class="btn-group btn-group-toggle mb-5" data-toggle="buttons">
-  <label class="btn btn-primary active">
-    <input type="radio" name="options" value="1" autocomplete="off" checked> Front Camera
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" value="2" autocomplete="off"> Back Camera
-  </label>
+
+<div class="tab-wrapper">
+	<!-- tab 영역이다. -->
+	<ul class="nav nav-tabs">
+	  <li class="nav-item">
+	    <a class="nav-link active" >회사지원내역</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" >상품지원내역</a>
+	  </li>
+	    <li class="nav-item">
+	    <a class="nav-link">고객확인</a>
+	  </li>
+	</ul>
+	<!-- tab-content 영역이다. -->
+	<div class="tab-content">
+		<div class="content show" id="tab1">
+		<table class="table" >
+		<thead>
+		    <tr>
+				<th scope="col"></th>
+				<th scope="col">지원품목</th>
+				<th scope="col">지원품목내용</th>
+				<th scope="col">비고</th>
+		    </tr>
+	 	</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>특이사항</td>
+					<td>200, 350패키지 상담 가능 / 개인행사대상</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>특이사항</td>
+					<td>200, 350패키지 상담 가능 / 개인행사대상</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td colspan="2"></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		</div>
+		<div class="content" id="tab2">메뉴 상세내용</div>
+		<div class="content" id="tab3">Active3</div>
+	</div>
 </div>

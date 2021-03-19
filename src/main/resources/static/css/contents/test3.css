@@ -1,5 +1,58 @@
 
 
+/*seachContant  */
+
+#seachContant .item{
+	margin:5px;
+}
+
+/*searchCompany  */
+
+#searchCompany{
+	display:flex;
+
+}
+
+#searchCompany .item:nth-child(1){
+
+	width:90%
+}
+
+#searchCompany .item:nth-child(2){
+	width:10%
+}
+
+
+
+/*searchEtc  */
+
+#searchEtc{
+	width:100%;
+	display:flex;
+
+}
+
+#searchEtc .item:nth-child(1){
+	width:50%;
+}
+
+
+#searchEtc .item:nth-child(2){
+	width:50%;
+}
+
+#searchEtc .item:nth-child(2) .form-select{
+	color:grey;
+}
+
+#searchEtc .item:nth-child(2) .form-select option{
+	color:black;
+}
+
+
+
+/*  tab-content */
+
 .tab-content{
 	padding:20px 0px;
 }

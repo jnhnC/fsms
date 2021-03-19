@@ -7,7 +7,7 @@
 <head>
 
 <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="/bootstrap/icon/bootstrap-icons.css" rel="stylesheet" >
+<link href="/bootstrap/icon/bootstrap-icons.css" rel="stylesheet">
 <link href="/css/normalize.css" rel="stylesheet">
 <link href="/css/contents/test.css" rel="stylesheet">
 
@@ -25,70 +25,49 @@
 }
 
 @font-face {
-    font-family: 'BMEuljiro10yearslater';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/BMEuljiro10yearslater.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'BMEuljiro10yearslater';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/BMEuljiro10yearslater.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
-
 </style>
 
 </head>
 
 
 <body>
-<div id="wrapper" >
-	<div class="container">
-		<div class="item">삼성SDS 임직원 보호 상품 안내</div>
-		<div class="item">
-			<div id="circle1">
-			원 만들기
-			</div>
-			<div id="circle1">
-			원 만들기
-			</div>
-			<div id="circle1">
-			원 만들기
-			</div>
-			<br>
-			<div id="circle1">
-			원 만들기2
-</div>
+	<div id="wrapper">
+
+		<div>
+			<img id="img" style="width:300px; hegiht:200px"/>
+
 		</div>
-		<div class="item">
-			<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-			
-		</div>
+
 	</div>
-</div>
-	
+
 </body>
 </html>
+
+
+<script>
+var data = '${img}';
+
+//Convert the string to bytes
+var bytes = new Uint8Array(data.length / 2);
+
+for (var i = 0; i < data.length; i += 2) {
+ bytes[i / 2] = parseInt(data.substring(i, i + 2), /* base = */ 16);
+}
+
+//Make a Blob from the bytes
+var blob = new Blob([bytes], {type: 'image/bmp'});
+
+//Use createObjectURL to make a URL for the blob
+var image = new Image();
+image.src = URL.createObjectURL(blob);
+//document.body.appendChild(image);
+$("#img").attr("src", image.src);
+
+</script>

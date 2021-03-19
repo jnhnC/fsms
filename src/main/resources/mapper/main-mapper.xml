@@ -10,6 +10,29 @@
     </select>
 
 
+     <select id="selectSign"  resultType="String">
+        <![CDATA[
+         	SELECT TOP 1 ITEM_IMAGE
+ 			 FROM HYUNJINSN..B_ITEM_IMAGE;
+        ]]>
+    </select>
+    
+  	 <insert id="insertActnErr" parameterType="actnErr">
+        <selectKey keyProperty="seq" resultType="int" order="BEFORE">
+            SELECT ACTN_ERR_SEQ.nextval FROM DUAL
+        </selectKey>
+        <![CDATA[
+          INSERT INTO ACTN_ERR (
+            SEQ, TYPE, CODE, MSG
+          )
+          VALUES (
+            #{seq},
+            #{type}, #{code}, #{msg}
+          )
+        ]]>
+    </insert>
+
+
 
 
 
