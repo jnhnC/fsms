@@ -1,15 +1,21 @@
 /* mobile-content  */
 #mobile-content{
-	font-size:30pt;
+	font-size:12pt;
+    
 }
 
 /* mobile-header */
 #mobile-header{
+	box-shadow: 0 0 2rem 0 rgb(41 48 66 / 10%);
 	display:flex;
+	height:60px;
+	align-items: stretch;
+	align-items: center;
+	
 }
 
 #mobile-header .item:nth-child(1){
-	font-size:50pt;
+	font-size:20pt;
 	width:10%;
 }
 
@@ -27,11 +33,16 @@
 
 #mobile-buttonbar{
 	display:flex;
+	height:60px;
+	align-items: stretch;
+	align-items: center;
+	background-color:gray;
+	
 }
 
 #mobile-buttonbar .item:nth-child(1){
 	width:10%;
-	font-size:45pt;
+	font-size:15pt;
 }
 
 
@@ -47,7 +58,7 @@
 
 
 #mobile-buttonbar button{
-	font-size:25pt;
+	font-size:10pt;
 }
 
 /* mobile-search */

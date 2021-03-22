@@ -1,8 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link href="/css/contents/mobile.css" rel="stylesheet">
 <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/bootstrap/icon/bootstrap-icons.css" rel="stylesheet" >
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 
 
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -52,9 +57,10 @@
 		</div>
 
 		<div class="item">
-
-			<button type="button" class="btn btn-primary">검색</button>
-			<button type="button" class="btn btn-primary">저장</button>
+			<i class="bi bi-search"></i>
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>
+			<i class="far fa-save"></i>
+			<!-- <button type="button" class="btn btn-primary">저장</button> -->
 
 		</div>
 
