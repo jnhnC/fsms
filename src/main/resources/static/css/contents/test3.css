@@ -8,7 +8,7 @@
 
 /*searchCompany  */
 
-#searchCompany{
+#searchCompany {
 	display:flex;
 
 }
@@ -50,6 +50,26 @@
 }
 
 
+/*resultContent  */
+
+#resultContent .contentWrap{
+	display:flex;
+	flex-wrap: wrap;
+}
+
+#resultContent .contentWrap .item:nth-child(1)  {
+	width:49%;
+}
+
+#resultContent .contentWrap .item:nth-child(2)  {
+	width:49%;
+}
+#resultContent .contentWrap .item:nth-child(3)  {
+	width:49%;
+}
+
+
+
 
 /*  tab-content */
 
@@ -72,4 +92,16 @@
 .tab-content thead th{
 	font-weight:normal;
 }
+
+.nav-item .active{
+	color:royalblue!important;
+
+}
+.nav-link{
+	color:#212529!important;
+}
+
+
+
+
 

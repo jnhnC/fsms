@@ -53,7 +53,7 @@
 
 <script>
 var data = '${img}';
-
+alert(data);
 //Convert the string to bytes
 var bytes = new Uint8Array(data.length / 2);
 

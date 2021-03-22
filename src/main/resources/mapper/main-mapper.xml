@@ -12,22 +12,18 @@
 
      <select id="selectSign"  resultType="String">
         <![CDATA[
-         	SELECT TOP 1 ITEM_IMAGE
- 			 FROM HYUNJINSN..B_ITEM_IMAGE;
+         	SELECT TOP 1 SIGN
+ 			 FROM  HJW..FSMS_SIGN
         ]]>
     </select>
-    
-  	 <insert id="insertActnErr" parameterType="actnErr">
-        <selectKey keyProperty="seq" resultType="int" order="BEFORE">
-            SELECT ACTN_ERR_SEQ.nextval FROM DUAL
-        </selectKey>
+
+  	 <insert id="insertSign" parameterType="FileupdDto" >
         <![CDATA[
-          INSERT INTO ACTN_ERR (
-            SEQ, TYPE, CODE, MSG
+          INSERT INTO HJW..FSMS_SIGN (
+             SIGN
           )
           VALUES (
-            #{seq},
-            #{type}, #{code}, #{msg}
+            #{itemImage}
           )
         ]]>
     </insert>

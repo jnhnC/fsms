@@ -1,5 +1,9 @@
 package com.hyunjin.fsms.controller;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,6 +20,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.hyunjin.fsms.dto.FileupdDto;
 import com.hyunjin.fsms.dto.MenuDto;
 import com.hyunjin.fsms.service.MainService;
 
@@ -48,22 +53,9 @@ public class MainController {
 
 		String signImage = mainService.selectSign();
 
-//		System.out.println("test: "+signImage);
-
-//		String imageData = signImage;
-//		String base64Data = imageData.split(",")[1];
-//
-//		byte[] decodedBytes = Base64.getDecoder().decode(base64Data);
-//		ByteArrayInputStream bis = new ByteArrayInputStream(decodedBytes);
-//		BufferedImage image = ImageIO.read(bis);
-//		System.out.println(image);
-//
-//		File outputFile = new File("output.png");
-//		ImageIO.write(image, "png", outputFile);
-//		Image imageFile  = ImageIO.read(new File("saved.png"));
 
 		model.addAttribute("img", signImage	);
-		return "main/test";
+		return "main/mobile";
 	}
 
 	@PostMapping("/login")
@@ -85,29 +77,38 @@ public class MainController {
 	}
 
 	@PostMapping("/fileupload")
-	public String fileupload(Model model, @RequestParam(value="file", required=true) MultipartFile [] files) throws Exception {
+	public ResponseEntity<Map<String, Object>> fileupload(Model model, @RequestParam(value="file", required=true) MultipartFile [] files) throws Exception {
+
+		Map<String,Object> resultMap = new HashMap<String,Object>();
+
+		FileupdDto fileupdDto = new FileupdDto();
 
 
+		String fileName = files[0].getOriginalFilename();
+		byte[] bytes = files[0].getBytes();
 
-		  String fileName = files[0].getOriginalFilename();
-		  byte[] bytes = files[0].getBytes();
+		/*
+		 * System.out.println("fileName:"+fileName); System.out.println("bytes:"+bytes);
+		 * System.out.println("fileSize:"+files[0].getSize());
+		 */
 
-		 
+		fileupdDto.setItemImage(bytes);
+
+		mainService.insertSign(fileupdDto);
 
 
+		model.addAttribute("img", files[0]	);
+
+		File file = new File(files[0].getOriginalFilename());
+		file.createNewFile();
+		FileOutputStream fos = new FileOutputStream(file);
+		fos.write(files[0].getBytes());
+		fos.close();
+
+		System.out.println(fos);
 
 
-
-//
-//		 String rootPath = FileSystemView.getFileSystemView().getHomeDirectory().toString();
-//		    String basePath = rootPath + "/" + "multi";
-//		    // 파일 업로드(여러개) 처리 부분
-//		    for(MultipartFile file : files) {
-//		        String originalName = file.getOriginalFilename();
-//		        System.out.println(originalName);
-//
-//		    }
-		return "test";
+		return new ResponseEntity<Map<String, Object>>(resultMap,HttpStatus.OK);
 
 
 	}
@@ -130,6 +131,14 @@ public class MainController {
 		model.addAttribute("menues", menues);
 		return "layout/main";
 	}
+
+
+	@GetMapping("/mobile")
+	public String mobile() {
+		return "main/mobile";
+	}
+
+
 
 	@GetMapping("/1")
 	public String test1() {

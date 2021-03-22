@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.hyunjin.fsms.dto.FileupdDto;
 import com.hyunjin.fsms.dto.MenuDto;
 import com.hyunjin.fsms.repository.MainMapper;
 
@@ -28,6 +29,15 @@ public class MainService {
 
 	}
 
+	public void insertSign(FileupdDto fileupdDto) {
+		 mapper.insertSign(fileupdDto);
 
+	}
+
+	/*
+	 * public void insertSign() { return mapper.insertSign();
+	 *
+	 * }
+	 */
 
 }

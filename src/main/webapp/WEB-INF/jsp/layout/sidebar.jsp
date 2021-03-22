@@ -35,7 +35,7 @@
 	            		<span><i class="bi bi-caret-up-fill"></i></span>
 	            	</a>
 	            	<ul id="" class="sidebar-dropdown" style="">
-						<li class="sub-item"><a class="sidebar-link" onclick="changeContents('/1')">팀장배정</a></li>
+						<li class="sub-item"><a class="sidebar-link" onclick="changeContents('/mobile')">팀장배정</a></li>
 						<li class="sub-item"><a class="sidebar-link" onclick="changeContents('/2')">상품조회</a></li>
 						<li class="sub-item"><a class="sidebar-link" onclick="changeContents('/3')">출고처리</a></li>
 						<li class="sub-item"><a class="sidebar-link" onclick="changeContents('/4')">고객상담</a></li>

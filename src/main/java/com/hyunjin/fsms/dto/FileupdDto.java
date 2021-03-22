@@ -5,8 +5,10 @@ import lombok.Data;
 @Data
 public class FileupdDto {
 
-	private String loginId;
-	private String loginPw;
-	private String leftMenu ;
-	private String menuName ;
+
+	private String itemCd;
+	private byte[] itemImage;
+	private String insrtUserId;
+	private String updtUserId;
+
 }
