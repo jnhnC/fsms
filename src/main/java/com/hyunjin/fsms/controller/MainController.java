@@ -1,10 +1,7 @@
 package com.hyunjin.fsms.controller;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -131,14 +128,6 @@ public class MainController {
 		model.addAttribute("menues", menues);
 		return "layout/main";
 	}
-
-
-	@GetMapping("/mobile")
-	public String mobile() {
-		return "main/mobile";
-	}
-
-
 
 	@GetMapping("/1")
 	public String test1() {

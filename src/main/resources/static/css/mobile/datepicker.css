@@ -1,0 +1,33 @@
+
+.datebox{
+	height:50px;
+	padding-top:10px;
+
+}
+
+ .datebox span{
+	font-size: calc(0.26vw + 7.08pt);
+	color:#FF8C0A;
+ 	z-index: 4;
+	position:absolute;
+ 	top:0px;
+ 	left:0px;
+
+}
+
+ .datebox input{
+ 	border:0px;
+ 	text-align:center;
+}
+
+
+ .datebox #date-icon{
+ 	z-index: 3;
+	position:relative;
+ 	top:0px;
+ 	left:-30px;
+}
+
+.datepicker table {
+	font-size:calc(0.26vw + 10.08pt);
+}

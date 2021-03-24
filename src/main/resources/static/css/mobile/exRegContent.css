@@ -1,0 +1,67 @@
+#exRegContent{
+	font-size: calc(0.26vw + 10.08pt);
+}
+
+
+#exRegContent>.dropdown .drop3btn{
+	height:30px;
+}
+
+#exRegContent>.dropdown-content{
+	width:98%;
+}
+
+
+
+#exRegContent>.dropdown .down-icon{
+	left:340px;
+}
+
+
+
+#exRegContent>.item:nth-child(3){
+	font-size: calc(0.26vw + 9.08pt);
+	width:100%;
+}
+
+
+
+#exRegContent>.item:nth-child(3){
+	margin-top:10px;
+
+
+}
+
+#exRegContent>.item:nth-child(3)>.table{
+	font-size: calc(0.26vw + 10.08pt);
+}
+
+
+#exRegContent>.item:nth-child(4)>.buttonGroup1{
+	display:flex;
+	flex-direction: row;
+	/* justify-content: space-between */;
+	justify-content: flex-end;
+	margin:0 5px;
+}
+
+#exRegContent>.item:nth-child(4) #mobile-result{
+	margin-top:10px;
+}
+
+#exRegContent>.item:nth-child(4) #mobile-result td{
+	height:50px;
+	vertical-align: middle;
+}
+
+#exRegContent>.item:nth-child(4) #mobile-result td input{
+	transform: scale( 1.5 );
+}
+
+
+#exRegContent>.item:nth-child(4)>.buttonGroup2{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin:0 5px;
+}

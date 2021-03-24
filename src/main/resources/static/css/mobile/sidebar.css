@@ -1,0 +1,130 @@
+
+
+.nav-side{
+    transition: margin-left .35s ease-in-out,left .35s ease-in-out,margin-right .35s ease-in-out,right .35s ease-in-out;
+    direction: ltr;
+    height:100%;
+}
+
+#logo_text{
+	font-size:12pt;
+}
+
+.sidebar-brand {
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: 12px 40px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    background-color:#FFE65A;
+    cursor:pointer;
+
+}
+.sidebar-brand img{
+ 	width: auto;
+ 	height: auto;
+    max-width: 40px;
+    max-height: 50px;
+
+}
+
+#band-text {
+	font-family: 'BMEuljiro10yearslater', sans-serif;
+    position: relative;
+	top:8px;
+	font-size:13pt;
+	color:gray;
+	padding-left:10px;
+}
+
+
+.sidebar-item{
+	font-size:10pt;
+	letter-spacing: 5px;
+}
+
+
+.sidebar-link, a.sidebar-link {
+    position: relative;
+    color: rgba(233,236,239,.5);
+    text-decoration: none;
+    font-weight: 400;
+    padding-left : 20px;
+    transition: color 75ms ease-in-out;
+    cursor: pointer;
+    display: block;
+    width:100%;
+    border-left :3px solid transparent;
+}
+
+.sidebar-menu{
+	margin-top:20px;
+}
+
+.sidebar-menu>ul>li>a{
+	line-height:30px;
+	border-bottom:1px solid rgba(225,255,255,0.1);
+}
+
+/*그룹또는서브메뉴 선택시 해당 그룹전체 이벤트   */
+.sidebar-menu ul li.active>a{
+	color : white;
+	background:#1e1e1e;
+	border-left-color: white;
+}
+
+
+.sidebar-menu ul ul{
+	position :  static;
+}
+
+.sidebar-menu ul ul li{
+	line-height:42px;
+	border-bottom:none;
+}
+
+.sidebar-menu ul ul li a{
+	font-size:10pt;
+	padding-left:60px;
+}
+
+/*그룹메뉴 클릭시 서브메뉴 상태  */
+ .sidebar-menu ul li.active ul li a{
+	 color : rgba(233,236,239,.5);
+	background: #293042;
+	border-left-color: transparent;
+}
+
+/*서브메뉴 마우스 오버시  */
+ .sidebar-menu ul ul li a:hover{
+	color : white!important;
+	background: #1e1e1e!important;
+}
+
+/*서브메뉴 마우스 클릭시  */
+ .sidebar-menu ul ul li.active a{
+	 color : white!important;
+	/* background: #1e1e1e!important;  */
+
+}
+
+ .sidebar-menu ul li a span:nth-child(2){
+	position :absolute;
+	right:20px;
+	top:50%;
+	transform: translateY(-50%);
+	font-size: 13pt;
+	transition : transform 0.4s;
+}
+
+ .sidebar-menu ul li a span.rotate{
+ 	transform: translateY(-50%) rotate(-180deg);
+ }
+
+.sidebar-dropdown.hide{
+	display:none;
+}
+
+

@@ -1,0 +1,29 @@
+
+/* mobile-header */
+#mobile-header{
+	/* box-shadow: 0 0 2rem 0 rgb(41 48 66 / 10%); */
+	display:flex;
+	height:40px;
+	align-items: stretch;
+	align-items: center;
+	width:100%;
+	padding: 0 10px;
+
+}
+
+#mobile-header .item:nth-child(1){
+	font-size: calc(0.26vw + 15.08pt);
+	width:10%;
+}
+
+#mobile-header .item:nth-child(2){
+	font-size: calc(0.26vw + 11.08pt);
+	width:60%;
+}
+
+
+#mobile-header .item:nth-child(3){
+	text-align:right;
+	width:30%;
+
+}

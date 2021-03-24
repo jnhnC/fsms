@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/bootstrap/icon/bootstrap-icons.css" rel="stylesheet" >
 <link href="/css/normalize.css" rel="stylesheet">
