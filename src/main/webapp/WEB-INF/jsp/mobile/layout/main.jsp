@@ -11,13 +11,13 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="/css/mobile/main.css" rel="stylesheet">
-<link href="/css/mobile/sidebar.css" rel="stylesheet" >
 <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/bootstrap/icon/bootstrap-icons.css" rel="stylesheet" >
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 
-
+<link href="/css/normalize.css" rel="stylesheet">
+<link href="/css/mobile/main.css" rel="stylesheet">
+<link href="/css/mobile/sidebar.css" rel="stylesheet" >
 
 <style>
 @font-face {
@@ -30,25 +30,23 @@
 }
 
 </style>
-
 </head>
 <body>
-
-<div id="mobile-wrapper">
-		<div id="mobile-sidebar" >
-		안녕
-		<%-- 	<jsp:include page="sidebar.jsp" /> --%>
+<div id="wrapper">
+		<div id="sidebar" >
+			<!-- <label for="menuicon"></label> -->
+			<jsp:include page="sidebar.jsp" />
 		</div>
 
-	<%-- <div id="mobile-main">
+	<div id="main">
 		<header id="header">
 			<jsp:include page="header.jsp" />
 		</header>
 
-		<div id="mobile-content">
+		<div id="content">
 			<jsp:include page="<%=contentPage%>" />
 		</div>
-	</div> --%>
+	</div>
 </div>
 </body>
 

@@ -17,7 +17,7 @@
 <script src="/bootstrap/js/bootstrap-datepicker.js"></script>
 <script src="/bootstrap/js/bootstrap-datepicker.ko.min.js"></script>
 <!-- currentCss -->
-<link href="/css/mobile/teamSearchContent.css" rel="stylesheet">
+<!-- <link href="/css/mobile/callSearchContent.css" rel="stylesheet"> -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <div id="teamSearchContent" style="white-space: nowrap;">
@@ -141,13 +141,13 @@
 					<thead>
 						<tr id="header">
 							<td></td>
-							<td>상태<br>탁송
+							<td>상태<br>사전상담
 							</td>
 							<td>주문일시<br>고객사
 							</td>
 							<td>대상자<br>의전팀장
 							</td>
-							<td></td>
+							<td>경조사유<br>장례식장</td>
 						</tr>
 					</thead>
 					<tbody>
@@ -181,12 +181,12 @@
 </div>
 
 <script>
-$('#menu-nav').html("팀장배정/조회")
+$('#menu-nav').html("유선상담/조회")
 
 $('.tablebox tbody tr').click(function(){
 	/* alert($(this).children('td:first').html()); */
 
-	var url = '/mobile/teamRegContent';
+	var url = '/mobile/callRegContent';
     $.ajax({
         type        :    "post",
         url : url,

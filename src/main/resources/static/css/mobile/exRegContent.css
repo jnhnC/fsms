@@ -55,7 +55,7 @@
 }
 
 #exRegContent>.item:nth-child(4) #mobile-result td input{
-	transform: scale( 1.5 );
+	transform: scale( 1.2 );
 }
 
 
@@ -64,4 +64,15 @@
 	flex-direction: row;
 	justify-content: space-between;
 	margin:0 5px;
+}
+
+#exRegContent>.item:nth-child(4)>.buttonGroup2 div{
+	font-size: calc(0.26vw + 8.6pt)
+}
+
+
+
+
+#exRegContent>.item:nth-child(5){
+	margin-top:30px;
 }

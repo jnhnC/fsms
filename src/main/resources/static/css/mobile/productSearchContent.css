@@ -1,3 +1,4 @@
+
 #productSearchContent #mobile-search .dropbox .down-icon{
 	left:130px;
 }
@@ -17,6 +18,18 @@
 #productSearchContent>.item:nth-child(4){
 	margin-top:10px;
 }
+
+#productSearchContent>.item:nth-child(4) .title{
+	width:40px;
+	font-size: calc(0.26vw + 9.08pt);
+}
+
+
+#productSearchContent>.item:nth-child(4) .value{
+	background-color:white;
+	text-align:right;
+}
+
 
 #productSearchContent>.item:nth-child(5){
 	font-size: calc(0.26vw + 10.08pt);

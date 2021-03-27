@@ -4,28 +4,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link href="/css/mobile/search.css" rel="stylesheet">
-<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="/bootstrap/icon/bootstrap-icons.css" rel="stylesheet" >
-<script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
-
 <link href="/css/mobile/tableList.css" rel="stylesheet">
 <link href="/css/mobile/search.css" rel="stylesheet">
 <link href="/css/mobile/selectSearch.css" rel="stylesheet">
-<script src="/js/selectSearch.js"></script>
-
-<link href="/css/mobile/productSearchContent.css" rel="stylesheet">
 <link href="/css/mobile/tab.css" rel="stylesheet">
+<link href="/css/mobile/buttonbar.css" rel="stylesheet">
+
+<script src="/js/selectSearch.js"></script>
 <script src="/js/tab.js"></script>
 
-<div id="productSearchContent">
+<link href="/css/mobile/productSearchContent.css" rel="stylesheet">
+
+
+<div id="productSearchContent" style="white-space: nowrap;">
 
 	<div class="item"> <!--1  -->
-		<jsp:include page="header.jsp" flush="false" />
+		<%-- <jsp:include page="header.jsp" flush="false" /> --%>
 	</div>
 
 	<div class="item"><!--2  -->
-		<jsp:include page="buttonbar.jsp" flush="false" />
+		<div id="mobile-buttonbar" >
+			<div class="item" >
+				<i class="bi bi-chevron-left"></i>
+			</div>
+
+			<div class="item">
+				<div class="dropdown">
+					<input type="text" class="drop3btn form-control " placeholder="경기본부"
+						onclick="" onkeyup="filterFunction(this)">
+					<i class="down-icon bi bi-caret-down-fill"></i>
+					<div id="" class="dropdown-content">
+						<a href="#about">본인상</a>
+						<a href="#base">부친상</a>
+						<a href="#blog">모친상</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="item">
+				<!-- <button class="btn btn-secondary shadow-sm  pt-1" style="font-size: calc(0.26vw + 7.6pt);">
+							 <i class="bi bi-search" style="font-size: calc(0.26vw + 6.6pt);"></i>
+			   	</button>
+			   	<button class="btn btn-secondary shadow-sm pt-1">
+					<i class="far fa-save"></i>
+					<div style="font-size: calc(0.26vw + 7.6pt);">저장</div>
+			   	</button>
+ -->
+
+			</div>
+
+		</div>
+
 	</div>
 
 	<div class="item"><!--3  -->
@@ -100,23 +130,21 @@
 		<table class="table" style="font-size: calc(0.26vw + 10.08pt);">
 		  <tbody>
 		    <tr>
-		      <td>상품금액</td>
-		      <td></td>
-		    </tr>
-		    <tr>
-		      <td>행사차감액</td>
-		      <td></td>
+		      <td class="title">상품금액</td>
+		      <td class="value">2,000,000</td>
+	          <td class="title">행사차감액</td>
+		      <td class="value">2,000,000</td>
 		    </tr>
 		     <tr>
-		      <td>개인부담금</td>
-		      <td></td>
+		      <td class="title">개인부담금</td>
+		      <td colspan="3" class="value">2,000,000</td>
 		    </tr>
 
 		  </tbody>
 		</table>
 	</div>
 
-	<div class="item">
+	<div class="item"><!--5  -->
 		<!--5  -->
 		<div class="tab-wrapper">
 			<!-- tab 영역이다. -->
@@ -127,72 +155,74 @@
 			<!-- tab-content 영역이다. -->
 			<div class="tab-content">
 				<div class="content show" id="tab1">
-					<div class="tablebox">
-						<table class="table">
-						  <thead>
-						  	<tr id="header">
-						      <td></td>
-						      <td>지원품목</td>
-						      <td>지원내용</td>
-				          </tr>
-						  </thead>
-						  <tbody>
-						    <tr>
-						      <td>1</td>
-						      <td>장례지도사</td>
-						      <td>2021-03-03 17:00</td>
-						    </tr>
-						     <tr>
-						      <td>2</td>
-						      <td>장례지도사</td>
-						      <td>2021-03-03 17:00</td>
-						    </tr>
-						       <tr>
-						      <td>3</td>
-						      <td>24시간여부</td>
-						      <td>2021-03-03 17:00</td>
-						    </tr>
-						       <tr>
-						      <td>4</td>
-						      <td>조사용품</td>
-						      <td>2021-03-03 17:00</td>
-						    </tr>
-						  </tbody>
-						</table>
+					<div class="mobile-result">
+						<div class="tablebox">
+							<table class="table">
+								<thead>
+									<tr id="header">
+										<td></td>
+										<td>지원품목</td>
+										<td>지원내용</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>장례지도사</td>
+										<td>2021-03-03 17:00</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>장례지도사</td>
+										<td>2021-03-03 17:00</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>24시간여부</td>
+										<td>2021-03-03 17:00</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>조사용품</td>
+										<td>2021-03-03 17:00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-					</div>
+				</div>
 				<div class="content" id="tab2">
-					<div class="tablebox">
-						<table class="table">
-							<thead>
-								<tr id="header">
-									<td></td>
-									<td>지원품목</td>
-									<td>지원내용</td>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th>1</th>
-									<td>배정완료</td>
-									<td>2021-03-03 17:00</td>
-								</tr>
-								<tr>
-									<th>2</th>
-									<td>배정완료</td>
-									<td>2021-03-03 17:00</td>
-								</tr>
-							</tbody>
-						</table>
+					<div class="mobile-result">
+						<div class="tablebox">
+							<table class="table">
+								<thead>
+									<tr id="header">
+										<td></td>
+										<td>지원품목</td>
+										<td>지원내용</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>1</th>
+										<td>배정완료</td>
+										<td>2021-03-03 17:00</td>
+									</tr>
+									<tr>
+										<th>2</th>
+										<td>배정완료</td>
+										<td>2021-03-03 17:00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-
-
-
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <script>
+$('#menu-nav').html("상품조회")
 
 </script>

@@ -6,19 +6,57 @@
 
 <link href="/css/mobile/selectSearch.css" rel="stylesheet">
 <link href="/css/mobile/tableList.css" rel="stylesheet">
+<link href="/css/mobile/buttonbar.css" rel="stylesheet">
+<link href="/css/mobile/selectSearch.css" rel="stylesheet">
+<link href="/css/mobile/nextpage.css" rel="stylesheet">
+<script src="/js/selectSearch.js"></script>
+
+<script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
+
+
 
 <link href="/css/mobile/exRegContent.css" rel="stylesheet">
 
-<script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
-<script src="/js/selectSearch.js"></script>
 
 <div id="exRegContent">
 	<div class="item"> <!--1  -->
-		<jsp:include page="header.jsp" flush="false" />
+	<%-- 	<jsp:include page="header.jsp" flush="false" /> --%>
 	</div>
 
 	<div class="item"><!--2  -->
-		<jsp:include page="buttonbar.jsp" flush="false" />
+		<div id="mobile-buttonbar" >
+			<div class="item" >
+				<i class="bi bi-chevron-left"></i>
+			</div>
+
+			<div class="item">
+				<div class="dropdown">
+					<input type="text" class="drop3btn form-control " placeholder="경기본부"
+						onclick="" onkeyup="filterFunction(this)">
+					<i class="down-icon bi bi-caret-down-fill"></i>
+					<div id="" class="dropdown-content">
+						<a href="#about">본인상</a>
+						<a href="#base">부친상</a>
+						<a href="#blog">모친상</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="item">
+		<!-- 		<button class="btn btn-secondary shadow-sm  pt-1" style="font-size: calc(0.26vw + 7.6pt);">
+							 <i class="bi bi-search" style="font-size: calc(0.26vw + 6.6pt);"></i>
+			   	</button>
+			   	<button class="btn btn-secondary shadow-sm pt-1">
+					<i class="far fa-save"></i>
+					<div style="font-size: calc(0.26vw + 7.6pt);">저장</div>
+			   	</button> -->
+
+
+			</div>
+
+		</div>
+
 	</div>
 
 	<div class="item"><!--3  -->
@@ -56,21 +94,26 @@
 					<div style="font-size: calc(0.26vw + 7.6pt);">전체선택</div>
    				</button> -->
 
-				<button class="btn btn-secondary shadow-sm pt-1">
-				<div style="background-color:">
-					<i class="fas fa-qrcode"></i>
+			<!-- 	<button class="btn btn-secondary shadow-sm" style="padding: 0 0.3rem; background-color:black">
+				<div>
+					<i class="bi bi-upc"   style="font-size: calc(0.26vw + 15.6pt);"></i>
 				</div>
-		  		</button>
+		  		</button> -->
+
+				<div style="background-color:black;width:45px;height:30px;text-align:center;border-radius: 4px;padding-top:2px;">
+			  		<i class="fas fa-barcode"  style="color:white;font-weight:bold;font-size: calc(0.26vw + 18.6pt);"></i>
+
+				</div>
 
 			</div>
 
-			<div id="mobile-result" class="">
+			<div class="mobile-result">
 				<div class="tablebox">
 					<table class="table">
 						<thead>
 							<tr id="header">
 								<td></td>
-								<td><input class="form-check-input me-1" type="checkbox"></td>
+								<td><input id="allCheck" name="checkbox" class="form-check-input me-1" type="checkbox"></td>
 								<td>품목명</td>
 								<td>수량</td>
 								<td>QR코드</td>
@@ -80,7 +123,7 @@
 						<tbody>
 							<tr>
 								<td></td>
-								<td><input class="form-check-input me-1" type="checkbox"></td>
+								<td><input name="checkbox" class="form-check-input me-1" type="checkbox"></td>
 								<td>인력지원</td>
 								<td>1</td>
 								<td>A0108670-A1228016</td>
@@ -88,7 +131,7 @@
 							</tr>
 							<tr>
 								<td></td>
-								<td><input class="form-check-input me-1" type="checkbox"></td>
+								<td><input name="checkbox" class="form-check-input me-1" type="checkbox"></td>
 								<td>지원상품</td>
 								<td>12</td>
 								<td>A0102630-A1257018</td>
@@ -102,24 +145,73 @@
 			<div class="buttonGroup2">
 				<div>
 			 		<button class="btn btn-secondary shadow-sm pt-1">
-						<div style="font-size: calc(0.26vw + 7.6pt);">출고취소</div>
+						<div>출고취소</div>
 	   				</button>
 
 				</div>
 
 				<div>
 				<button class="btn btn-primary shadow-sm pt-1">
-					<div style="font-size: calc(0.26vw + 7.6pt);">출고등록</div>
+					<div>출고등록</div>
    				</button>
 
 				</div>
 
 			</div>
+	</div>
 
+	<div class="item"><!--5  -->
+		<div id="nextPage">
+			<button class="btn btn-primary">
+				상품페이지로 이동 <i class="bi bi-chevron-right"></i>
+			</button>
+
+		</div>
 	</div>
 </div>
 
 
+<script>
+	$('#menu-nav').html("출고처리/등록")
 
+	$('#allCheck').click(function(){
+		var checked = $(this).is(":checked");
+
+		if(checked){
+			$(this).parents("table").find('input').prop("checked", true);
+		} else {
+			$(this).parents("table").find('input').prop("checked", false);
+		}
+	});
+
+
+	$('#nextPage').click(function(){
+		/* alert($(this).children('td:first').html()); */
+
+		var url = '/mobile/productSearchContent';
+	    $.ajax({
+	        type        :    "get",
+	        url : url,
+	        dataType    :    'html',
+	        success        :    function(data){
+	            $("#content").children().remove();
+	            $("#content").html(data);
+
+	            // 접속 URL만 페이지 변환없이 변경
+	            // IE 10 이상이서만 지원...
+	          /*   history.pushState({"html":data},'',currentMenuUrl) */
+	        }
+	        , beforeSend: function() {
+
+	        },
+	        complete:function(){
+	        }
+	       });
+
+	});
+
+
+
+</script>
 
 

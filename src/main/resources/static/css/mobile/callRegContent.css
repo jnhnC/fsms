@@ -1,0 +1,34 @@
+
+#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(1) {
+	display:flex;
+	justify-content: space-around;
+	margin-top:10px;
+}
+
+
+#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(1) .btn{
+	font-size: calc(0.26vw + 9.08pt);
+	margin:0px;
+}
+
+
+#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(2){
+	margin-top:10px;
+}
+
+#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(2) .title{
+	width:40px;
+	font-size: calc(0.26vw + 9.08pt);
+}
+
+
+#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(2) .value{
+	background-color:white;
+	text-align:right;
+}
+
+#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(3) .mobile-result{
+	margin:0px;
+}
+
+

@@ -25,9 +25,17 @@ $(function(){
     todayHighlight : true ,	//오늘 날짜에 하이라이팅 기능 기본값 :false
     toggleActive : true,	//이미 선택된 날짜 선택하면 기본값 : false인경우 그대로 유지 true인 경우 날짜 삭제
     weekStart : 0 ,//달력 시작 요일 선택하는 것 기본값은 0인 일요일
-    language : "ko"	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다.
+    language : "ko",	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다.
+	  showOn: "button",
+	  buttonText: '<i id="date-icon" class="bi bi-calendar-check"></i>'
 
 });//datepicker end
+
+$('.calendar-icon').click(function(){
+      	$(this).siblings('.datePicker').datepicker().focus();
+});
+
+
 
 $('#startDate').val(new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10))
 $('#lastDate').val(new Date().toISOString().slice(0, 10));

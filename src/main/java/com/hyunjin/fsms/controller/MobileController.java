@@ -2,6 +2,7 @@ package com.hyunjin.fsms.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import lombok.RequiredArgsConstructor;
 
@@ -65,12 +66,17 @@ public class MobileController {
 		return "mobile/datepicker";
 	}
 
+	@GetMapping("/mobile/teamContent")
+	public String teamContent() {
+		return "mobile/teamContent";
+	}
+
 	@GetMapping("/mobile/teamSearchContent")
 	public String teamSearchContent() {
 		return "mobile/teamSearchContent";
 	}
 
-	@GetMapping("/mobile/teamRegContent")
+	@PostMapping("/mobile/teamRegContent")
 	public String teamRegContent() {
 		return "mobile/teamRegContent";
 	}
@@ -89,6 +95,15 @@ public class MobileController {
 		return "mobile/productSearchContent";
 	}
 
+	@GetMapping("/mobile/callSearchContent")
+	public String callSearchContent() {
+		return "mobile/callSearchContent";
+	}
+
+	@PostMapping("/mobile/callRegContent")
+	public String callRegContent() {
+		return "mobile/callRegContent";
+	}
 
 
 

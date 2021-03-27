@@ -85,7 +85,7 @@ function changeContents(url){
 
             // 접속 URL만 페이지 변환없이 변경
             // IE 10 이상이서만 지원...
-            history.pushState({"html":data},'',currentMenuUrl)
+       /*      history.pushState({"html":data},'',currentMenuUrl) */
         }
         , beforeSend: function() {
 

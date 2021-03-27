@@ -1,30 +1,28 @@
 
 /* mobile-wrap  */
-#mobile-wrapper{
+#wrapper{
 	font-size: calc(0.26vw + 9.08pt);
+	align-items: stretch;
     display: flex;
     width: 100%;
-    height:100%;
+
 }
 
-#mobile-wrapper input{
+#wrapper input{
 	font-size: calc(0.26vw + 10.08pt);
 
 }
 
 
-#mobile-sidebar{
-	 flex: 1;
-	width:100%;
-	height:100%;
+#sidebar{
+	width:0px;
 	background: #293042;
     transition:all .35s;
-
 }
 
 
-#mobile-main {
-    display: none;
+#main {
+    display: flex;
     width: 100%;
     min-height: 100vh;
     min-width: 0;
@@ -34,9 +32,9 @@
 
 }
 
-#mobile-content{
-    padding:2%;
+#content{
+  /*   padding:2%; */
     background-color:#f7f9fc;
     height:100%;
-    font-size:11pt;
+    white-space:nowrap;
 }

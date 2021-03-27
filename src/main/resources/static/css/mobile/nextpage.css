@@ -1,0 +1,13 @@
+#nextPage {
+	text-align:right;
+}
+
+
+#nextPage button{
+	margin:0px;
+	padding:0.2rem;
+	padding-left:0.8rem;
+	font-size: calc(0.26vw + 9.08pt);
+    background-color: #000069;
+    border:0px;
+}

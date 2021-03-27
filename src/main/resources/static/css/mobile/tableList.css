@@ -1,5 +1,5 @@
 
-#mobile-result{
+.mobile-result{
 	/* margin-top:20px; */
 	box-shadow: 0 2px 4px 0 rgb(43 43 43 / 10%);
 	border-radius: 0.5rem;
@@ -7,29 +7,33 @@
 
 }
 
-#mobile-result .tablebox #header{
+.mobile-result .tablebox #header{
 	background-color:#f5f5f5;
 
 }
-#mobile-result .tablebox #header td{
+.mobile-result .tablebox #header td{
 	margin:20px;
 
 }
 
-#mobile-result .title{
+.mobile-result .title{
 	padding:8px;
 }
-#mobile-result .tablebox td {
+.mobile-result .tablebox td {
 	text-align:center;
-	font-size: calc(0.26vw + 9.08pt);
+	font-size: calc(0.26vw + 10.08pt);
 
 }
 
-#mobile-result .tablebox #header td{
+.mobile-result .tablebox #header td{
 	font-size: calc(0.26vw + 9.08pt);
 }
 
-#mobile-result .table td, .table th {
+.mobile-result .table td, .table th {
     padding: 3px;
     border-top: 0px;
+}
+
+.mobile-result .tablebox tbody tr{
+	background-color:white;
 }
