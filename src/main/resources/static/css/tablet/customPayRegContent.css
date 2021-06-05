@@ -1,0 +1,108 @@
+
+@media screen and (max-width:1400px){
+   		 #customPayRegContent{
+   		 /* 	width: 100%; */
+			min-width:360px;
+		}
+
+		#customPayRegContent #mobile-search tr:nth-child(1) span{
+			width:40px;
+		}
+
+
+		#customPayRegContent>.item:nth-child(3) .title{
+			width:20%;
+			text-align:center;
+			font-size: calc(0.26vw + 9.08pt);
+		}
+
+
+		#customPayRegContent>.item:nth-child(3) .value{
+			background-color:white;
+			text-align:center;
+		}
+
+
+
+
+		#customPayRegContent>.item:nth-child(4){
+			margin-top:10px;
+		}
+
+
+		#customPayRegContent>.item:nth-child(4) .title{
+			width:20%;
+			text-align:center;
+			font-size: calc(0.26vw + 9.08pt);
+		}
+
+
+		#customPayRegContent>.item:nth-child(4) .value{
+			background-color:white;
+			text-align:right;
+		}
+
+
+		#customPayRegContent>.item:nth-child(5){
+			display:flex;
+			font-size: calc(0.26vw + 10.08pt);
+		}
+
+		#customPayRegContent>.item:nth-child(5) .tab-content td{
+			font-size: calc(0.26vw + 10.08pt);
+		}
+
+
+
+		#customPayRegContent>.item:nth-child(5) .tab-content #tab1 .item-content{
+			 display:flex;
+			 width:100%;
+			 flex-wrap: wrap;
+			 justify-content: space-between;
+			 align-items: center;
+		}
+
+		#customPayRegContent>.item:nth-child(5) .tab-content #tab1 .datePicker{
+			border:0px;
+
+		}
+
+
+
+		#customPayRegContent>.item:nth-child(5) .tab-content #tab2  #convasContent #canvas{
+			background-color: white;
+
+		}
+
+
+
+
+		#customPayRegContent>.item:nth-child(5) .tab-content #tab2 .item-content{
+			 display:flex;
+			 width:100%;
+			 flex-wrap: wrap;
+			 justify-content: space-around;
+		}
+
+
+		#customPayRegContent>.item:nth-child(5) .tab-content #tab3 .item-content{
+			margin-top:20px;
+
+		}
+
+
+    }
+@media screen and (max-width:1020px){
+
+
+}
+
+
+
+@media screen and (max-width:768px){
+
+}
+
+
+
+

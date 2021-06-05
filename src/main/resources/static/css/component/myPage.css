@@ -1,0 +1,46 @@
+
+@media screen and (max-width:1400px){
+	#myPage{
+		min-width:360px;
+	}
+
+	#myPage .item-content{
+		display:flex;
+		width:100%;
+		justify-content: space-between;
+	}
+
+	#myPage .item-content #myInfo{
+		width:49%
+	}
+
+	#myPage .item-content #pdInfo{
+		width:49%
+	}
+
+
+
+}
+
+@media screen and (max-width:1020px){
+
+
+}
+
+
+
+@media screen and (max-width:768px){
+	#myPage .item-content{
+		display:block;
+		width:100%;
+	}
+
+	#myPage .item-content #myInfo{
+		width:100%
+	}
+
+	#myPage .item-content #pdInfo{
+		width:100%
+	}
+
+}

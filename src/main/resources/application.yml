@@ -3,6 +3,11 @@ spring:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
       
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
@@ -16,4 +21,9 @@ mybatis:
   
   configuration:
     map-underscore-to-camel-case: true
+
+server:
+  servlet:
+    context-path: /
+#  port: 80
 

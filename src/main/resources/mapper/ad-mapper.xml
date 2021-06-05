@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hyunjin.fsms.repository.AdMapper">
+
+
+     <select id="fspAd001S01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_AD001_S01 (#{bpCd},#{empNo},#{startDate},#{endDate}) }
+        ]]>
+    </select>
+
+      <select id="fspAd002S01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_AD002_S01 (#{soNo}) }
+        ]]>
+    </select>
+
+    <select id="fspAd002S02" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_AD002_S02 (#{soNo}) }
+        ]]>
+    </select>
+
+
+      <select id="fspAd002S03" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_AD002_S03 () }
+        ]]>
+    </select>
+
+      <select id="fspAd002S04" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_AD002_S04 () }
+        ]]>
+    </select>
+
+        <select id="fspAd002U01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_AD002_U01 (#{soNo},#{itemCd},#{totAmt1},#{poQty},#{bpCd},#{empNo},#{status}, #{costGubun}) }
+        ]]>
+    </select>
+
+
+
+</mapper>
+

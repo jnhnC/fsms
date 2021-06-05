@@ -57,24 +57,22 @@
 			 contentType: false,
 			success : function(result) {
 
-	/* 			var data = result.img;
+				var data = result;
 
-				alert(data);
 				//Convert the string to bytes
 				var bytes = new Uint8Array(data.length / 2);':'
-				for (var i = 0; i < data.length; i += 2) { */
-			//	 bytes[i / 2] = parseInt(data.substring(i, i + 2), /* base = */ 16);
-			//	}
+				for (var i = 0; i < data.length; i += 2) {
+				 bytes[i / 2] = parseInt(data.substring(i, i + 2), /* base = */ 16);
+				}
 
 				//Make a Blob from the bytes
-			/* 	var blob = new Blob([bytes], {type: 'image/bmp'});
+			 	var blob = new Blob([bytes], {type: 'image/bmp'});
 
 				//Use createObjectURL to make a URL for the blob
 				var image = new Image();
 				image.src = URL.createObjectURL(blob);
 				document.body.appendChild(image);
-				$("#img1").attr("src", image.src); */
-
+				$("#img1").attr("src", image.src);
 			}
 		});
 
@@ -111,24 +109,20 @@
 		  })
 		}; */
 
-//	var data = '${img}';
+	var data = '${img}';
+	alert(data);
+	var bytes = new Uint8Array(data.length / 2);':'
 
-//	alert(data);
-	//Convert the string to bytes
-//	var bytes = new Uint8Array(data.length / 2);':'
+	for (var i = 0; i < data.length; i += 2) {
+	 bytes[i / 2] = parseInt(data.substring(i, i + 2), /* base = */ 16);
+	}
 
-//	for (var i = 0; i < data.length; i += 2) {
-	// bytes[i / 2] = parseInt(data.substring(i, i + 2), /* base = */ 16);
-//	}
+	var blob = new Blob([bytes], {type: 'image/bmp'});
 
-	//Make a Blob from the bytes
-	//var blob = new Blob([bytes], {type: 'image/bmp'});
-
-	//Use createObjectURL to make a URL for the blob
-//	var image = new Image();
-	//image.src = URL.createObjectURL(blob);
-//	document.body.appendChild(image);
-	//$("#img1").attr("src", image.src);
+	var image = new Image();
+	image.src = URL.createObjectURL(blob);
+	document.body.appendChild(image);
+	$("#img1").attr("src", image.src);
 
 
 

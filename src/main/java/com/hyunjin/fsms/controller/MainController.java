@@ -1,23 +1,16 @@
 package com.hyunjin.fsms.controller;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
-import com.hyunjin.fsms.dto.FileupdDto;
 import com.hyunjin.fsms.dto.MenuDto;
 import com.hyunjin.fsms.service.MainService;
 
@@ -30,7 +23,7 @@ public class MainController {
 	private final MainService mainService;
 
 	@GetMapping("/")
-	public String index(Model model) throws Exception {
+	public String login(Model model) throws Exception {
 //		List<MenuDto> allMenues = mainService.selectMenu();
 //
 //		List<MenuDto> categroies = new ArrayList<>();
@@ -48,70 +41,40 @@ public class MainController {
 //		return "layout/main";
 
 
-		String signImage = mainService.selectSign();
 
-
-		model.addAttribute("img", signImage	);
-		return "main/mobile";
-	}
-
-	@PostMapping("/login")
-	public String login(@PathVariable("loginId") String loginId, @PathVariable("loginPw") String loginPw) {
-		// LoginDto loginDto = mainService.selectLogin();
+		/*
+		 * String signImage = mainService.selectSign();
+		 *
+		 * model.addAttribute("img", signImage );
+		 */
 
 		return "main/login";
 	}
 
-	@GetMapping("/home")
-	public String home() {
-		// LoginDto loginDto = mainService.selectLogin();
-		return "main/index";
+	@GetMapping("/index")
+	public String index(Model model) throws Exception {
+		return "br/br001";
 	}
 
-	@GetMapping("/sign")
-	public String sign() {
-		return "main/sign";
+	@GetMapping("/alert")
+	public String alert(Model model) throws Exception {
+		return "component/alert";
 	}
 
-	@PostMapping("/fileupload")
-	public ResponseEntity<Map<String, Object>> fileupload(Model model, @RequestParam(value="file", required=true) MultipartFile [] files) throws Exception {
-
-		Map<String,Object> resultMap = new HashMap<String,Object>();
-
-		FileupdDto fileupdDto = new FileupdDto();
-
-
-		String fileName = files[0].getOriginalFilename();
-		byte[] bytes = files[0].getBytes();
-
-		/*
-		 * System.out.println("fileName:"+fileName); System.out.println("bytes:"+bytes);
-		 * System.out.println("fileSize:"+files[0].getSize());
-		 */
-
-		fileupdDto.setItemImage(bytes);
-
-		mainService.insertSign(fileupdDto);
-
-
-		model.addAttribute("img", files[0]	);
-
-		File file = new File(files[0].getOriginalFilename());
-		file.createNewFile();
-		FileOutputStream fos = new FileOutputStream(file);
-		fos.write(files[0].getBytes());
-		fos.close();
-
-		System.out.println(fos);
-
-
-		return new ResponseEntity<Map<String, Object>>(resultMap,HttpStatus.OK);
-
-
-	}
 
 	@GetMapping("/main")
-	public String main(Model model) throws Exception {
+	public String main(Model model, HttpServletRequest request) throws Exception {
+
+		HttpSession session = request.getSession();
+
+		
+		
+		session.setAttribute("bpCd", "C1091");
+		session.setAttribute("majorCd", "XS001");
+		session.setAttribute("empNo", "F1022");
+
+
+
 		List<MenuDto> allMenues = mainService.selectMenu();
 
 		List<MenuDto> categroies = new ArrayList<>();
@@ -129,29 +92,71 @@ public class MainController {
 		return "layout/main";
 	}
 
-	@GetMapping("/1")
-	public String test1() {
-		return "main/test1";
+	@GetMapping("/productSelectSearchContent")
+	public String productSelectSearchContent() {
+		return "tablet/productSelectSearchContent";
 	}
 
-	@GetMapping("/2")
-	public String test2() {
-		return "main/test2";
+
+	@PostMapping("/productSelectRegContent")
+	public String productSelectRegContent() {
+		return "tablet/productSelectRegContent";
 	}
 
-	@GetMapping("/3")
-	public String test3() {
-		return "main/test3";
+	@GetMapping("/consultResultSearchContent")
+	public String consultResultSearchContent() {
+		return "tablet/consultResultSearchContent";
 	}
 
-	@GetMapping("/4")
-	public String test4() {
-		return "main/test4";
+
+	@PostMapping("/consultResultRegContent")
+	public String consultResultRegContent() {
+		return "tablet/consultResultRegContent";
 	}
 
-	@GetMapping("/5")
-	public String test5() {
-		return "main/test5";
+	@GetMapping("/customSignSearchContent")
+	public String customSignSearchContent() {
+		return "tablet/customSignSearchContent";
 	}
+
+	@PostMapping("/customSignRegContent")
+	public String customSignRegContent() {
+		return "tablet/customSignRegContent";
+	}
+
+	@GetMapping("/fdSearchContent")
+	public String fdSearchContent() {
+		return "tablet/fdSearchContent";
+	}
+
+	@PostMapping("/fdRegContent")
+	public String fdRegContent() {
+		return "tablet/fdRegContent";
+	}
+
+
+	@GetMapping("/addDedSearchContent")
+	public String addDedSearchContent() {
+		return "tablet/addDedSearchContent";
+	}
+
+	@PostMapping("/addDedRegContent")
+	public String addDedRegContent() {
+		return "tablet/addDedRegContent";
+	}
+
+
+	@GetMapping("/customPaySearchContent")
+	public String customPaySearchContent() {
+		return "tablet/customPaySearchContent";
+	}
+
+	@PostMapping("/customPayRegContent")
+	public String customPayRegContent() {
+		return "tablet/customPayRegContent";
+	}
+
+
+
 
 }

@@ -1,6 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-	<nav class="navbar navbar-light bg-light justify-content-between">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<link href="./css/layout/header.css" rel="stylesheet" >
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- 	<nav class="navbar navbar-light bg-light justify-content-between">
 		<div class="header-contents">
 			<div class="hearder-item align-self-center" id="menuicon" onClick="activeMenu();">
 				<i class="bi bi-list h2"></i>
@@ -28,20 +35,51 @@
 				</div>
 			</div>
 		</div>
-	</nav>
+	</nav> -->
+	<div id="header-contents">
+
+
+		<div class="item " id="menuBtn" onClick="activeMenu()">
+		 	<i class="bi bi-grid-3x3-gap-fill"></i>
+			<div id="menu-nav" style="font-size: calc(0.26vw + 10.08pt);"></div>
+		</div>
+
+
+		<div class="item" id="funcBtn">
+			<div class="hearder-item" >
+				<div id="homeBtn" onclick="changeContents('index')"><i class="bi bi-house-door-fill"></i></div>
+				<div id="dropContent">
+					<div id="dropBtn" class="dropBtn dropBtnBox"  onclick="checkConfirm()">
+						<span class="dropBtnBox"><i class="bi bi-person-circle"></i></span>
+						<span class="dropBtnBox">홍길동 <!-- <i class="bi bi-caret-down-fill dropBtnBox"></i> --></span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 <script>
-	activemenu = 0;
+	 activemenu = 1;
 	function activeMenu(){
 		if(activemenu == 0){
-			$("#sidebar>nav>div").css("display","none");
-			$("#sidebar").css("width","0");
+			$("#sidebar>nav #sidebar-content").css("display","none");
+			$("#sidebar").removeClass('show');
 			activemenu = 1;
+
+			$(".mask").css("display","none");
+
 		}else{
-			$("#sidebar>nav>div").css("display","");
-			$("#sidebar").css("width","200px");
+			$("#sidebar>nav #sidebar-content").css("display","block");
+			$("#sidebar").toggleClass('show');
 			activemenu = 0;
+
+			setTimeout(function(){
+				$(".mask").css("width",$('#main').width());
+				$(".mask").css("height","100%");
+				$(".mask").css("display","block");
+			},400)
 		}
 	}
 
@@ -56,7 +94,20 @@
 
 	});
 
-	$(document).click(function(e){
+
+	var checkConfirm = function (){
+		var result = confirm('마이페이지로 이동하시겠습니까?');
+
+		if(result) {
+			changeContents('myPage');
+		} else {
+
+		}
+
+	};
+
+
+	$("#header-contents").click(function(e){
 		if (!$(e.target).hasClass("dropBtnBox")) {
 			if($('#dropmenu').hasClass("show")){
 				 $('#dropmenu').removeClass("show");
@@ -65,29 +116,20 @@
 
 	});
 
-	function changeContents(url){
 
-	    $.ajax({
-	        type        :    "get",
-	        url : url,
-	        dataType    :    'html',
-	        success        :    function(data){
-	            $("#content").children().remove();
-	            $("#content").html(data);
+	$("#wrapper").click(function(e){
+		if ($(e.target).hasClass("mask")) {
+			if(activemenu == 0){
+				activeMenu();
+			}
+		}else{
+		}
 
-	            // 접속 URL만 페이지 변환없이 변경
-	            // IE 10 이상이서만 지원...
-	        }
-	        , beforeSend: function() {
-
-	        },
-	        complete:function(){
-	        }
-	       });
+	});
 
 
 
-	}
+
 
 
 

@@ -63,7 +63,7 @@
 	});
 
 	document.addEventListener("message", function(data) {
-		alert(data.data)
+	/* 	alert(data.data) */
 	})
 
 

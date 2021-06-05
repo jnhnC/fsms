@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hyunjin.fsms.repository.TmMapper">
+
+
+	<resultMap id="ssoHdrResult" type="SSoHdr">
+		 <id property="soNo" column="so_no" javaType="String"/>
+		 <id property="orderDt" column="order_dt" jdbcType="DATE" javaType="java.sql.Date"/>
+	 	<association property="soDeptKo843" column="so_no" javaType="SSoDeptKo843" resultMap="soDeptKo843Result" />
+
+	</resultMap>
+
+	    <resultMap id="soDeptKo843Result" type="SSoDeptKo843">
+        <id property="soNo" column="so_no" javaType="String"/>
+       	<result column="col_nm" property="colNm"/>
+    </resultMap>
+
+
+<!--      <select id="fspTm001S01"  resultMap="ssoHdrResult">
+        <![CDATA[
+			SELECT A.so_no, A.order_dt, B.col_nm
+			from HYUNJINSN_TEST..S_SO_HDR A
+			inner join HYUNJINSN_TEST..S_SO_DEPT_KO843 B
+			on  A.so_no = B.so_no
+			where A.so_no = '202103030001'
+        ]]>
+    </select> -->
+
+     <select id="fspTm001S01" parameterType="hashmap"  resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_TM001_S01 (#{bpCd} , #{majorCd}, #{startDate} ,#{endDate} ) }
+        ]]>
+    </select>
+
+
+     <select id="fspTm002S01" parameterType="String" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_TM002_S01 (#{soNo}) }
+        ]]>
+    </select>
+
+	 <select id="fspTm002S02" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_TM002_S02 (#{soNo}, #{bpCd}) }
+        ]]>
+    </select>
+
+     <select id="fspTm002S03" parameterType="hashmap" resultType="int">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_TM002_S03 (#{soNo}, #{bpCd}) }
+        ]]>
+    </select>
+
+     <select id="fspTm002S04" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_TM002_S04 (#{bpCd}, #{majorCd}) }
+        ]]>
+    </select>
+
+
+     <select id="fspTm002U01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_TM002_U01 (#{soNo},#{empNo},#{poBpCd},#{updtUserId}) }
+        ]]>
+    </select>
+
+      <select id="fspTm002U02" parameterType="hashmap" resultType="String">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_TM002_U02 (#{soNo},#{bpCd},#{updtUserId}) }
+        ]]>
+    </select>
+
+
+
+
+
+
+
+
+
+</mapper>
+

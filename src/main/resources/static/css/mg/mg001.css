@@ -1,0 +1,28 @@
+
+	#mgSearchContent{
+		min-width:1024px;
+	}
+
+
+	#mgSearchContent>.item:nth-child(4) tbody tr{
+		background-color:white;
+	}
+
+@media all and (max-width:1024px){
+
+}
+
+@media screen and (max-width:1020px){
+
+
+}
+
+
+@media screen and (max-width:767px){
+	#mgSearchContent{
+		min-width:360px;
+	}
+}
+
+
+

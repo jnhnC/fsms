@@ -1,0 +1,45 @@
+/*  tab-content */
+
+.tab-wrapper{
+	width:100%;
+}
+
+.tab-content{
+	padding:0px 0px;
+}
+
+.content{
+	display:none;
+}
+
+.content.show{
+	display:block;
+}
+
+.nav-tabs{
+	cursor:pointer;
+	font-size: calc(0.26vw + 10.08pt);
+	border-bottom:1px solid #dfdfdf;
+
+}
+
+.tab-content thead th{
+	font-weight:normal;
+}
+
+.nav-item .active{
+	color:royalblue!important;
+	font-weight: bold;
+
+}
+.nav-link{
+	color:#212529!important;
+
+}
+
+.nav-tabs .nav-link{
+	margin-bottom: -3px;
+	/* border-top-right-radius: 15px; */
+
+}
+

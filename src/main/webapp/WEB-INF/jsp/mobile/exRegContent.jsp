@@ -4,11 +4,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="/css/mobile/selectSearch.css" rel="stylesheet">
-<link href="/css/mobile/tableList.css" rel="stylesheet">
-<link href="/css/mobile/buttonbar.css" rel="stylesheet">
-<link href="/css/mobile/selectSearch.css" rel="stylesheet">
-<link href="/css/mobile/nextpage.css" rel="stylesheet">
+<link href="/css/component/selectSearch.css" rel="stylesheet">
+<link href="/css/component/tableList.css" rel="stylesheet">
+<link href="/css/component/buttonbar.css" rel="stylesheet">
+<link href="/css/component/selectSearch.css" rel="stylesheet">
+<link href="/css/component/nextpage.css" rel="stylesheet">
 <script src="/js/selectSearch.js"></script>
 
 <script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
@@ -25,16 +25,19 @@
 
 	<div class="item"><!--2  -->
 		<div id="mobile-buttonbar" >
-			<div class="item" >
+			<div id="prevPage" class="item" >
 				<i class="bi bi-chevron-left"></i>
 			</div>
 
 			<div class="item">
 				<div class="dropdown">
-					<input type="text" class="drop3btn form-control " placeholder="경기본부"
+					<div class="dropdown-input">
+						<input type="text" class="drop3btn form-control " placeholder="경기본부"
 						onclick="" onkeyup="filterFunction(this)">
-					<i class="down-icon bi bi-caret-down-fill"></i>
-					<div id="" class="dropdown-content">
+						<i class="down-icon bi bi-caret-down-fill"></i>
+					</div>
+
+					<div  class="dropdown-content">
 						<a href="#about">본인상</a>
 						<a href="#base">부친상</a>
 						<a href="#blog">모친상</a>
@@ -160,14 +163,14 @@
 			</div>
 	</div>
 
-	<div class="item"><!--5  -->
+	<!-- <div class="item">5
 		<div id="nextPage">
 			<button class="btn btn-primary">
 				상품페이지로 이동 <i class="bi bi-chevron-right"></i>
 			</button>
 
 		</div>
-	</div>
+	</div> -->
 </div>
 
 
@@ -182,6 +185,31 @@
 		} else {
 			$(this).parents("table").find('input').prop("checked", false);
 		}
+	});
+
+	$('#prevPage').click(function(){
+		/* alert($(this).children('td:first').html()); */
+
+		var url = '/mobile/exSearchContent';
+	    $.ajax({
+	        type        :    "get",
+	        url : url,
+	        dataType    :    'html',
+	        success        :    function(data){
+	            $("#content").children().remove();
+	            $("#content").html(data);
+
+	            // 접속 URL만 페이지 변환없이 변경
+	            // IE 10 이상이서만 지원...
+	          /*   history.pushState({"html":data},'',currentMenuUrl) */
+	        }
+	        , beforeSend: function() {
+
+	        },
+	        complete:function(){
+	        }
+	       });
+
 	});
 
 

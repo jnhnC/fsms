@@ -1,0 +1,72 @@
+@media screen and (max-width:1400px){
+	#tcRegContent{
+		font-size: calc(0.26vw + 10.08pt);
+		min-width:360px;
+	}
+
+	#tcRegContent select{
+		font-size: calc(0.26vw + 9.08pt);
+	}
+
+	#tcRegContent #header{
+		font-size: calc(0.26vw + 9.08pt);
+	}
+
+
+
+	#tcRegContent>.dropdown .drop3btn{
+		height:30px;
+	}
+
+	#tcRegContent>.dropdown-content{
+		width:98%;
+	}
+
+
+
+	#tcRegContent>.dropdown .down-icon{
+		left:340px;
+	}
+
+
+
+	#tcRegContent>.item:nth-child(3){
+		font-size: calc(0.26vw + 9.08pt);
+		width:100%;
+	}
+
+
+
+	#tcRegContent>.item:nth-child(3){
+		margin-top:10px;
+
+
+	}
+
+	#tcRegContent>.item:nth-child(3)>.table{
+		font-size: calc(0.26vw + 10.08pt);
+	}
+
+	#tcRegContent>.item:nth-child(4) div{
+		font-size: calc(0.26vw + 9.08pt);
+	}
+
+	#tcRegContent>.item:nth-child(4) .mobile-result .table td, .table th {
+		font-size: calc(0.26vw + 9.08);
+		padding: 5px 10px;
+	}
+
+
+
+}
+
+@media screen and (max-width:1020px){
+
+
+}
+
+
+
+@media screen and (max-width:768px){
+
+}

@@ -7,20 +7,19 @@
 <script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
 
 
-<link href="/css/mobile/tableList.css" rel="stylesheet">
-<link href="/css/mobile/buttonbar.css" rel="stylesheet">
-<link href="/css/mobile/search.css" rel="stylesheet">
-<link href="/css/mobile/selectSearch.css" rel="stylesheet">
+<link href="/css/component/tableList.css" rel="stylesheet">
+<link href="/css/component/buttonbar.css" rel="stylesheet">
+<link href="/css/component/search.css" rel="stylesheet">
+<link href="/css/component/selectSearch.css" rel="stylesheet">
 <script src="/js/selectSearch.js"></script>
 <script src="/js/datepicker.js"></script>
 <link rel="stylesheet" href="/bootstrap/css/bootstrap-datepicker.css">
 <script src="/bootstrap/js/bootstrap-datepicker.js"></script>
 <script src="/bootstrap/js/bootstrap-datepicker.ko.min.js"></script>
 <!-- currentCss -->
-<!-- <link href="/css/mobile/callSearchContent.css" rel="stylesheet"> -->
+<link href="/css/mobile/callSearchContent.css" rel="stylesheet">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<div id="teamSearchContent" style="white-space: nowrap;">
+<div id="callSearchContent" class="card mx-2 rounded border-0" style="box-shadow: 0 0.5rem 0.5rem rgb(0 0 0 / 2%) !important;">
 
 	<div class="item"><!--1  -->
 	</div>
@@ -34,29 +33,32 @@
 
 			<div class="item">
 				<div class="dropdown">
-					<input type="text" class="drop3btn form-control " placeholder="경기본부"
+					<div class="dropdown-input">
+						<input type="text" class="drop3btn form-control " placeholder="경기본부"
 						onclick="" onkeyup="filterFunction(this)">
-					<i class="down-icon bi bi-caret-down-fill"></i>
-					<div id="" class="dropdown-content">
-						<a href="#about">본인상</a>
-						<a href="#base">부친상</a>
-						<a href="#blog">모친상</a>
+						<i class="down-icon bi bi-caret-down-fill"></i>
+					</div>
+
+					<div class="dropdown-content">
+						<a href="#about">인천본부</a>
+						<a href="#base">서울본부</a>
+						<a href="#blog">충남본부</a>
+						<a href="#blog">부산본부</a>
+						<a href="#blog">전남본부</a>
+						<a href="#blog">구미본부</a>
+						<a href="#blog">울산본부</a>
 					</div>
 				</div>
 			</div>
 
 
 			<div class="item">
-				<button class="btn btn-secondary shadow-sm  pt-1" style="font-size: calc(0.26vw + 7.6pt);">
-					 <i class="bi bi-search" style="font-size: calc(0.26vw + 6.6pt);"></i>
-
-		  	</button>
-
-
-			   	  <!--	 <button class="btn btn-secondary shadow-sm pt-1">
-					<div style="font-size: calc(0.26vw + 7.6pt);">저장</div>
+				<button class="btn btn-secondary shadow-sm  p-0" >
+					 <i class="bi bi-search" style="font-size: calc(0.26vw + 11.6pt); padding:0 14px;"></i>
+		  		</button>
+			 <!--   	 <button class="btn btn-secondary shadow-sm p-0">
+					<div style="font-size: calc(0.26vw + 8.6pt); padding:4px 14px">저장</div>
 			   	</button> -->
-
 			</div>
 
 </div>
@@ -64,8 +66,9 @@
 
 	<div class="item"><!--3  -->
 		<div id="mobile-search" class="">
-			<div class="title">
+			<div class="title rounded">
 				<div>검색조건</div>
+				<div class="hideButton"><i class="bi bi-caret-up-fill"></i></div>
 			</div>
 			<div class="table-box">
 				<table>
@@ -73,7 +76,7 @@
 						<tr>
 							<td style="border-left: 0px;">
 								<div class="datebox">
-									<div>
+									<div class="table-title">
 										<span>주문일자(From)</span>
 									</div>
 									<div class="datePickerbox">
@@ -84,7 +87,7 @@
 							</td>
 							<td style="border-right: 0px;">
 								<div class="datebox">
-									<div>
+									<div class="table-title">
 										<span>주문일자(To)</span>
 									</div>
 									<div class="datePickerbox">
@@ -97,17 +100,19 @@
 						<tr>
 							<td style="border-left: 0px;">
 							<div class="dropbox">
-								<div>
+								<div class="table-title">
 									<span>진행상태</span>
 								</div>
 								<div class="dropdown">
-									<input type="text"  class="drop3btn form-control " placeholder="진행상태"
-										 onkeyup="filterFunction(this)">
-									<i class="down-icon bi bi-caret-down-fill"></i>
+									<div class="dropdown-input">
+										<input type="text"  class="drop3btn form-control " placeholder="진행상태"
+											 onkeyup="filterFunction(this)">
+										<i class="down-icon bi bi-caret-down-fill"></i>
+									</div>
 									<div id="" class="dropdown-content">
-										<a href="#about">본인상</a>
-										<a href="#base">부친상</a>
-										<a href="#blog">모친상</a>
+										<a href="#about">발주완료</a>
+										<a href="#base">접수완료</a>
+										<a href="#blog">배정완료</a>
 									</div>
 								</div>
 							</div>
@@ -116,7 +121,7 @@
 							</td>
 							<td style="border-right: 0px;">
 								<div class="inputbox">
-									<div>
+									<div class="table-title">
 										<span>대상자</span>
 									</div>
 									<div>
@@ -153,7 +158,7 @@
 					<tbody>
 						<tr>
 							<td style="display:none;">A001</td>
-							<td>1</td>
+							<td style="width:20px;text-align:center;">1</td>
 							<td>배정완료</td>
 							<td>2021-03-03 17:00<br>제일병원
 							</td>
@@ -182,6 +187,12 @@
 
 <script>
 $('#menu-nav').html("유선상담/조회")
+
+$('#mobile-search>.title').click(function(){
+	$(this).next('.table-box').slideToggle(100);
+ 	$('.hideButton i').toggleClass("rotate");
+});
+
 
 $('.tablebox tbody tr').click(function(){
 	/* alert($(this).children('td:first').html()); */

@@ -1,0 +1,138 @@
+@media screen and (max-width:1400px){
+   		 #customSignRegContent{
+   		 /* 	width: 100%; */
+			min-width:360px;
+		}
+
+
+
+		#customSignRegContent #mobile-search tr:nth-child(1) span{
+			width:40px;
+		}
+
+
+		/* item:nth-child(3)   */
+
+
+
+/* 		#customSignRegContent>.item:nth-child(3) .title{
+			width:20%;
+			text-align:center;
+			font-size: calc(0.26vw + 9.08pt);
+		}
+ */
+
+/* 		#customSignRegContent>.item:nth-child(3) .value{
+			width:30%;
+			background-color:white;
+			text-align:center;
+		}
+ */
+
+
+
+
+
+	/* 	#customSignRegContent>.item:nth-child(4) .title{
+			width:20%;
+			text-align:center;
+			font-size: calc(0.26vw + 9.08pt);
+		}
+
+
+		#customSignRegContent>.item:nth-child(4) .value{
+			background-color:white;
+			text-align:center;
+		}
+ */
+
+		#customSignRegContent>.item:nth-child(5){
+			display:flex;
+			font-size: calc(0.26vw + 10.08pt);
+		}
+
+		#customSignRegContent>.item:nth-child(5) .tab-content td{
+			font-size: calc(0.26vw + 10.08pt);
+
+		}
+
+		#customSignRegContent>.item:nth-child(5) .tab-content #tab1 td:nth-child(1){
+			min-width:70px;
+			text-align:center;
+			width:8%;
+
+		}
+
+		#customSignRegContent>.item:nth-child(5) .tab-content #tab1 td:nth-child(2){
+			width:300px;
+			text-align:center;
+			width:30%;
+
+		}
+
+		#customSignRegContent>.item:nth-child(5) .tab-content #tab1 td:nth-child(3){
+			text-align:left;
+			min-width:500px;
+			width:60%;
+
+		}
+
+
+
+		#customSignRegContent>.item:nth-child(5) .tab-content #tab2 .item-content{
+			 display:flex;
+			 width:100%;
+			 flex-wrap: wrap;
+			 justify-content: space-around;
+			 align-items: center;
+		}
+
+		#customSignRegContent>.item:nth-child(5) .tab-content #tab2 .item-content table td{
+			border:0px;
+		}
+
+
+		#customSignRegContent>.item:nth-child(5) .tab-content #tab2 .item-content .datePicker{
+			border:1px soild;
+		}
+
+		#customSignRegContent>.item:nth-child(5) .tab-content #tab3 .item-content{
+			width:100%;
+			display:flex;
+			justify-content: space-around;
+		}
+
+		#customSignRegContent>.item:nth-child(5) .tab-content #tab3 .item{
+			width:49%;
+		}
+
+		#customSignRegContent>.item:nth-child(5) .tab-content #tab3 .item:nth-child(1){
+			padding-left :30px;
+			padding-top:10px;
+		}
+
+		#customSignRegContent>.item:nth-child(5) .tab-content #tab3 .item:nth-child(2){
+			margin-right :20px;
+		}
+
+		#customSignRegContent>.item:nth-child(5) .tab-content #tab3 .item-content #canvas{
+			background-color:white;
+
+
+		}
+
+    }
+    @media screen and (max-width:1020px){
+
+
+}
+
+
+
+@media screen and (max-width:768px){
+
+}
+
+
+
+

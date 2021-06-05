@@ -92,7 +92,8 @@
   -moz-border-radius: 10px;
   border-radius: 10px;
   border: none;
- font-size: calc(0.26vw + 10.08pt);
+ font-size: calc(0.26vw + 12.08pt);
+ padding:8px;
 }
 .table-striped .datepicker table tr td,
 .table-striped .datepicker table tr th {

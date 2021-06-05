@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
 <script src="/js/selectSearch.js"></script>
 

@@ -1,0 +1,26 @@
+#fdSearchContent{
+		min-width:1024px;
+	}
+
+
+#fdSearchContent>.item:nth-child(4) tbody tr{
+	background-color:white;
+}
+
+@media all and (max-width:1024px){
+
+}
+
+@media screen and (max-width:1020px){
+
+
+}
+
+
+
+@media screen and (max-width:768px){
+
+}
+
+
+

@@ -1,34 +1,71 @@
+@media screen and (max-width:1400px){
+	#callRegContent{
+		min-width:360px;
+	}
 
-#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(1) {
-	display:flex;
-	justify-content: space-around;
-	margin-top:10px;
+	#callRegContent .tab-wrapper .tab-content #tab1  .mobile-result .tablebox td:nth-child(3){
+		text-align:left;
+		padding-left:10px;
+	}
+
+	#callRegContent .tab-wrapper .tab-content #tab2  .mobile-result .tablebox td:nth-child(3){
+		text-align:left;
+		padding-left:10px;
+	}
+
+
+	#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(1) {
+		display:flex;
+		justify-content: space-around;
+		margin-top:10px;
+	}
+
+
+	#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(1) .dropdown{
+		width:50%;
+	}
+
+
+	#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(1) .btn{
+		font-size: calc(0.26vw + 9.08pt);
+		margin:0px;
+	}
+
+
+	#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(2){
+	/* 	margin-top:10px; */
+	}
+
+	#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(2) .title{
+		/* width:40%; */
+		text-align:center;
+		font-size: calc(0.26vw + 9.08pt);
+	}
+
+
+	#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(2) .value{
+		background-color:white;
+		text-align:right;
+	}
+
+	#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(3) .mobile-result{
+		margin:0px;
+	}
+
+	#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(3) .mobile-result .tablebox td:nth-child(3){
+		text-align:left;
+		padding-left:10px;
+	}
+
+}
+
+@media screen and (max-width:1020px){
+
+
 }
 
 
-#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(1) .btn{
-	font-size: calc(0.26vw + 9.08pt);
-	margin:0px;
+
+@media screen and (max-width:768px){
+
 }
-
-
-#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(2){
-	margin-top:10px;
-}
-
-#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(2) .title{
-	width:40px;
-	font-size: calc(0.26vw + 9.08pt);
-}
-
-
-#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(2) .value{
-	background-color:white;
-	text-align:right;
-}
-
-#callRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(3) .mobile-result{
-	margin:0px;
-}
-
-

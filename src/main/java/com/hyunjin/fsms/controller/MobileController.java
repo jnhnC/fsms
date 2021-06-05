@@ -1,8 +1,14 @@
 package com.hyunjin.fsms.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import com.hyunjin.fsms.dto.TmDto;
+import com.hyunjin.fsms.service.TmService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -10,6 +16,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MobileController {
 
+	private final TmService tmService;
 
 	@GetMapping("/mobile")
 	public String mobile() {
@@ -18,16 +25,13 @@ public class MobileController {
 
 	@GetMapping("/mobile/index")
 	public String index() {
-		return "mobile/index";
+		return "mobile/mobileIndex";
 	}
-
 
 	@GetMapping("/mobile/main")
 	public String mobilMain() {
 		return "mobile/layout/main";
 	}
-
-
 
 	@GetMapping("/mobile/header")
 	public String mobileHeader() {
@@ -71,15 +75,25 @@ public class MobileController {
 		return "mobile/teamContent";
 	}
 
-	@GetMapping("/mobile/teamSearchContent")
-	public String teamSearchContent() {
-		return "mobile/teamSearchContent";
-	}
+	/*
+	 * @PostMapping("/mobile/teamSearchContent") public String
+	 * teamSearchContent(Model model, TmDto tmDto) { tmDto.setBpCd("C1091");
+	 * tmDto.setMajorCd("XS001"); List<TmDto> tmDtos = tmService.fspTm001S01(tmDto);
+	 * System.out.println(tmDtos); model.addAttribute("tmDtos", tmDtos);
+	 *
+	 * return "mobile/teamSearchContent"; }
+	 */
 
-	@PostMapping("/mobile/teamRegContent")
-	public String teamRegContent() {
-		return "mobile/teamRegContent";
-	}
+	/*
+	 * @PostMapping("/mobile/teamRegContent") public String teamRegContent() {
+	 *
+	 * tmService.fspTm002S01();
+	 *
+	 * tmService.fspTm002S02(); tmService.fspTm002S03();
+	 *
+	 * return "mobile/teamRegContent"; }
+	 */
+
 	@GetMapping("/mobile/exSearchContent")
 	public String exSearchContent() {
 		return "mobile/exSearchContent";
@@ -105,6 +119,34 @@ public class MobileController {
 		return "mobile/callRegContent";
 	}
 
+	@GetMapping("/mobile/dispatchReqSearchContent")
+	public String dispatchReqSearchContent() {
+		return "mobile/dispatchReqSearchContent";
+	}
 
+	@PostMapping("/mobile/dispatchReqRegContent")
+	public String dispatchReqRegContent() {
+		return "mobile/dispatchReqRegContent";
+	}
+
+	@GetMapping("/mobile/dispatchSearchContent")
+	public String dispatchSearchContent() {
+		return "mobile/dispatchSearchContent";
+	}
+
+	@PostMapping("/mobile/dispatchRegContent")
+	public String dispatchRegContent() {
+		return "mobile/dispatchRegContent";
+	}
+
+	@GetMapping("/mobile/driveRegSearchContent")
+	public String driveRegSearchContent() {
+		return "mobile/driveRegSearchContent";
+	}
+
+	@PostMapping("/mobile/driveRegRegContent")
+	public String driveRegRegContent() {
+		return "mobile/driveRegRegContent";
+	}
 
 }

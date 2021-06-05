@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hyunjin.fsms.repository.CrMapper">
+
+
+     <select id="fspCr001S01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_CR001_S01 (#{bpCd},#{empNo},#{startDate},#{endDate}) }
+        ]]>
+    </select>
+
+  	<select id="fspCr002S01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_CR002_S01 (#{soNo}) }
+        ]]>
+    </select>
+
+  	<select id="fspCr002S02" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_CR002_S02 (#{empNo}) }
+        ]]>
+    </select>
+
+    <select id="fspCr002S03" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_CR002_S03 () }
+        ]]>
+    </select>
+
+    <select id="fspCr002U01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_CR002_U01 (	#{soNo},#{empNo},#{mName},#{mMourner},#{mRoomYn},#{mRoomNo},#{mDt1},#{mDt2},#{mDt3},
+												#{adBsDt},#{adYpDt},#{adGjDt},#{mLoc1},#{mLoc2},#{mType1},#{mManagerCd},#{noPkgCd})
+			}
+        ]]>
+    </select>
+
+
+</mapper>
+

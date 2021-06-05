@@ -1,0 +1,80 @@
+@media screen and (max-width:1400px){
+	#dispatchReqRegContent{
+		min-width:360px;
+
+	}
+
+	#dispatchReqRegContent  .item:nth-child(3) table td{
+		height:20px;
+		padding:3px;
+	}
+
+
+	#dispatchReqRegContent  .item:nth-child(3) table .title{
+		width:120px;
+	}
+
+
+	#dispatchReqRegContent  .item:nth-child(3) table .value{
+		background-color:white;
+	}
+
+	#dispatchReqRegContent .item:nth-child(4) .dropdown{
+		width:80%;
+
+	}
+
+	#dispatchReqRegContent .item:nth-child(6) {
+		text-align:right;
+
+	}
+
+	#dispatchReqRegContent .item:nth-child(6) button{
+		font-size: calc(0.26vw + 9.08pt);
+
+	}
+
+
+
+	#dispatchReqRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(1) {
+		display:flex;
+		justify-content: space-around;
+		margin-top:10px;
+	}
+
+
+	#dispatchReqRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(1) .btn{
+		font-size: calc(0.26vw + 9.08pt);
+		margin:0px;
+	}
+
+
+	#dispatchReqRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(2){
+		margin-top:10px;
+	}
+
+	#dispatchReqRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(2) .title{
+		width:40%;
+		text-align:center;
+		font-size: calc(0.26vw + 9.08pt);
+	}
+
+
+
+	#dispatchReqRegContent .tab-wrapper .tab-content #tab3 .item:nth-child(3) .mobile-result{
+		margin:0px;
+	}
+
+
+}
+
+@media screen and (max-width:1020px){
+
+
+}
+
+
+
+@media screen and (max-width:768px){
+
+}

@@ -1,0 +1,48 @@
+@media screen and (max-width:1400px){
+
+	.table-row tr td{
+		padding:0px;
+		padding-top:2px;
+		padding-bottom:2px;
+		font-size: calc(0.26vw + 10.08pt);
+
+	}
+
+	.table-row .title{
+		width:14%;
+		/* padding-left:30px; */
+		background-color:#ebeff1;
+		border-top:1px solid rgba(0,0,0,.125);
+		text-align:right;
+		padding:5px 10px;
+
+	}
+
+	.table-row .value{
+		text-align:left;
+		width:36%;
+		border-top:1px solid rgba(0,0,0,.125);
+		background-color: white;
+		padding-left:15px;
+	}
+}
+
+
+@media screen and (max-width:1020px){
+
+
+}
+
+
+
+@media screen and (max-width:768px){
+.table-row .title{
+		width:25%;
+
+	}
+
+	.table-row .value{
+		width:75%;
+	}
+
+}

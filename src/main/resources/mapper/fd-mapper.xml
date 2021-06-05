@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hyunjin.fsms.repository.FdMapper">
+
+
+    <select id="fspFd001S01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_FD001_S01 (#{bpCd},#{empNo},#{startDate},#{endDate}) }
+        ]]>
+    </select>
+
+
+ 	<select id="fspFd002S01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_FD002_S01 (#{soNo},#{empNo}) }
+        ]]>
+    </select>
+
+
+ 	<select id="fspFd002S02" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_FD002_S02 (#{soNo}) }
+        ]]>
+    </select>
+
+    <select id="fspFd002U01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_FD002_U01 (#{soNo},#{status},#{actSeq},#{actDtIn},#{actDtOut},#{actRemark},#{empNo}) }
+        ]]>
+    </select>
+
+
+</mapper>
+

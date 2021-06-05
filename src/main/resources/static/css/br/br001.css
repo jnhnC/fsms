@@ -1,0 +1,18 @@
+#brSearchContent{
+		min-width:360px;
+}
+#brSearchContent>.item:nth-child(3) tbody tr{
+		background-color:white;
+	}
+
+@media all and (min-width:1024px){
+
+}
+
+@media screen and (max-width:1020px){
+
+}
+
+@media screen and (max-width:767px){
+
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hyunjin.fsms.repository.PsMapper">
+
+
+     <select id="fspPs001S01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+        	{ CALL HJW_TEST.dbo.FSP_PS001_S01 (#{bpCd},#{empNo},#{startDate},#{endDate}) }
+        ]]>
+    </select>
+
+    <select id="fspPs002S01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+        	{ CALL HJW_TEST.dbo.FSP_PS002_S01 (#{soNo},#{bpCd},#{empNo},#{startDate},#{endDate}) }
+        ]]>
+    </select>
+
+
+    <select id="fspPs002S02" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+        	{ CALL HJW_TEST.dbo.FSP_PS002_S02 (#{poBpCd},#{itemCd},#{hsType},#{hsCode}) }
+        ]]>
+    </select>
+
+     <select id="fspPs002S04" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+        	{ CALL HJW_TEST.dbo.FSP_PS002_S04 (#{soldToParty},#{hsType}  ) }
+        ]]>
+    </select>
+
+
+     <select id="fspPs002S05" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+        	{ CALL HJW_TEST.dbo.FSP_PS002_S05 (#{soldToParty},#{hsType}) }
+        ]]>
+    </select>
+
+     <select id="fspPs002S06" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+        	{ CALL HJW_TEST.dbo.FSP_PS002_S06 (#{soldToParty},#{hsType},#{itemCd}) }
+        ]]>
+    </select>
+
+       <select id="fspPs002S07" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+        	{ CALL HJW_TEST.dbo.FSP_PS002_S07 (#{soldToParty},#{hsType}) }
+        ]]>
+    </select>
+
+     <select id="fspPs002S08" parameterType="hashmap" resultType="hashmap">
+       <![CDATA[
+       		{ CALL HJW_TEST.dbo.FSP_PS002_S08() }
+       ]]>
+    </select>
+
+    <select id="fspPs002S09" parameterType="hashmap" resultType="hashmap">
+       <![CDATA[
+       		{ CALL HJW_TEST.dbo.FSP_PS002_S09(#{soNo}) }
+       ]]>
+    </select>
+
+    <select id="fspPs002U01" parameterType="hashmap" resultType="hashmap">
+       <![CDATA[
+       		{ CALL HJW_TEST.dbo.FSP_PS002_U01(#{soNo},#{adMemo},#{adSign},#{adType},#{adPackItem},#{adChItem},#{empNo},#{infoAgreeYn}) }
+       ]]>
+    </select>
+
+
+     <select id="fspPs002D01" parameterType="hashmap" resultType="hashmap">
+       <![CDATA[
+       		{ CALL HJW_TEST.dbo.FSP_PS002_D01(#{soNo}) }
+       ]]>
+    </select>
+
+
+     <select id="fspPs002I01" parameterType="hashmap" resultType="hashmap">
+       <![CDATA[
+       		{ CALL HJW_TEST.dbo.FSP_PS002_I01(#{soNo},#{adSupCd},#{empNo}) }
+       ]]>
+    </select>
+</mapper>
+

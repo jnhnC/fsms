@@ -1,158 +1,100 @@
-body {
-	font-family: 'GoyangIlsan', sans-serif;
+	#header-contents{
+		min-width:360px;
+		display:flex;
+		align-items: flex-end;
+		width:100%;
+		padding: 0 10px;
+	}
+
+	#header-contents>.item:nth-child(1){
+		flex-basis: 80%;
+		display:flex;
+
+	}
+
+	#header-contents>.item:nth-child(1)>i{
+		font-weight:bold;
+		color:#FF8C0A;
+		font-size: calc(0.26vw + 17.08pt);
+		margin-right:10px;
+		padding-top:5px;
+
+
+	}
+
+	#header-contents  #menu-nav{
+		font-size: calc(0.26vw + 11.08pt);
+		padding:10px 0;
+	}
+
+	#header-contents #funcBtn{
+		flex-basis: 20%;
+		height:35px;
+		text-align:right;
+
+	}
+
+	#header-contents #funcBtn .hearder-item{
+		display:flex;
+		justify-content:  flex-end;
+
+	}
+
+	#header-contents #funcBtn .hearder-item #homeBtn{
+	    margin-right:10px;
+
+	}
+	#header-contents #funcBtn .hearder-item #homeBtn i{
+		font-size: calc(0.26vw + 13.08pt);
+	}
+
+
+
+	#header-contents #funcBtn .hearder-item #dropBtn i{
+		font-size: calc(0.26vw + 13.08pt);
+
+	}
+
+@media all and (min-width:1024px){
+
+
+
 }
 
-.header-contents{
-	width:100%;
-	display:flex;
-	
-	
-}
+@media screen and (max-width:1020px){
 
 
 
+	#header-contents>.item:nth-child(3) .hearder-item #homeBtn{
+		display:none;
+	}
 
-.hearder-item:nth-child(1) {
-	flex-basis: 5%;
-}
+/* 	#header-contents>.item:nth-child(3) .hearder-item #dropBtn span:nth-child(1){
+		display:none;
+	} */
 
-.hearder-item:nth-child(2) {
-	flex-basis: 80%;
-	
-}
-
-.hearder-item:nth-child(3) {
-	flex-basis: 5%;
-	display:flex;
-}
-
-
-
-#menu-nav{
-	display:flex;
-}
-
-
-#menu-nav span{
-	padding-right:5px;
-	display:none;
-}
-
-#homeBtn{
-	font-size:14pt;
-	cursor:pointer;
-}
-
-
-.navbar-bg {
-    background: #fff;
-    padding:10px;
-}   
-   
-.navbar {
-    border-bottom: 0;
-    box-shadow: 0 0 2rem 0 rgb(41 48 66 / 10%);
-}
-
-.navbar-expand {
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-}
-
-/* hearder layout  */
-
-
-
-#menucheck{
-	display:none;
-}
-
-#menuicon {
-	cursor: pointer;
-	padding-left:10px;	
-}
-
-a {
-  background-color: transparent;
-  text-decoration: none;
-}
-
-
-/*드랍메뉴 layout*/
-#dropContent{
-	display: flex;
-	flex-direction: column; 
-	width:170px;
-	padding-right:10px;
-	
-}
-#dropContent span:nth-child(1){
-	text-align:right;
-	flex-shrink: 0;
-	width: 20%;
-	
-}
-#dropContent span:nth-child(2){
-	padding-left:10px;
-	flex-shrink: 0;
-	width: 70%;
-	
-}
-#dropContent span:nth-child(3){
-	flex-grow: 1;
-	
 }
 
 
-/*드랍버튼  */
-#dropBtn{
-	display: flex;
-	justify-content: space-between; 
-	width:100%;
-	padding-left:10px;
-	cursor:pointer;
-	/* background-color: #293042; */
-	border-radius: 3px;
-}
-#dropBtn span:nth-child(1){
-	font-size:14pt;	
-}
+@media screen and (max-width:767px){
 
-#dropmenu{
-	display: flex;
-	flex-direction: column;
-	background-color: #293042;
-	line-height:40px;
-	border: 1px solid hsla(0,0%,100%,.15);
-	border-radius: 3px;
-	height:0;	
-	width:100%;
-	display:none;
- 	transition:all .35s;
-	
-	
+
+	#header-contents #funcBtn {
+	    flex-basis: 30%;
+	}
+
+
+	#header-contents .hearder-item #homeBtn{
+	/* 	display:none; */
+
+	}
+
 }
 
 
-#dropmenu li{
-	border-bottom:1px solid rgba(225,255,255,0.1);
-}
-
-#dropmenu li a{
-	border-bottom:1px solid rgba(225,255,255,0.1);
-	padding-left:20px;
-}
 
 
-#dropmenu a{
-	color:white;
-	line-height:35px;
-}
 
-#dropmenu.show{
-	height:auto;	
-	display:block;
-	transition:all .35s;
-}
+
 
 

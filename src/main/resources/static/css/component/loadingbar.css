@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+
+.loadingbar{
+
+	 display:none;
+}
+.loadingMask{
+
+	position: absolute;
+	background-color: #000;
+	opacity: 0.3;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-webkit-justify-content: center;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	-ms-box-pack: center;
+	-ms-box-align: center;}
+
+
+
+.spinner-border, .spinner-grow {
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+}

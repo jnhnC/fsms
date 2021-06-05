@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hyunjin.fsms.repository.CpMapper">
+
+
+
+    <select id="fspCp002U01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{
+				CALL HJW_TEST.dbo.FSP_CP002_U01 (	#{soNo},#{infoAgreeFinal},#{infoAgreeFinalSign} )
+			}
+        ]]>
+    </select>
+
+	 <select id="fspCp002S01" parameterType="hashmap"  resultType="String">
+        <![CDATA[
+         	SELECT INFO_AGREE_FINAL_SIGN AS SIGN
+ 			 FROM  HJW_TEST..FS_AD_HDR
+ 			 WHERE SO_NO = #{soNo};
+        ]]>
+    </select>
+
+   	<select id="fspCp002U02" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_CP002_U02 (
+				#{soNo},
+				#{seq},
+				#{payType},
+				#{billAmt},
+				#{cardAppNo},
+				#{orderNo},
+				#{cancelOrderNo},
+				#{payStatus},
+				#{uuid},
+				#{empNo}
+			)}
+        ]]>
+    </select>
+
+
+</mapper>
+

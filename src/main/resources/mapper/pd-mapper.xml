@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hyunjin.fsms.repository.PdMapper">
+
+
+     <select id="fspPd001S04" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW.dbo.FSP_PD001_S04 (#{bpCd},#{itemCd},#{hsType},#{hsCode}) }
+        ]]>
+    </select>
+
+      <select id="fspPd001S05" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW.dbo.FSP_PD001_S05 (#{bpCd},#{itemCd},#{hsType}) }
+        ]]>
+    </select>
+
+      <select id="fspPd001S06" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW.dbo.FSP_PD001_S06 (#{bpCd},#{hsCode}) }
+        ]]>
+    </select>
+
+
+
+
+</mapper>
+

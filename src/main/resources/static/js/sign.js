@@ -14,8 +14,8 @@
 
 	// 이제 html 버그인지는 모르겠는데 canvas의 style의 height와 width를 수정하게 되면 그림이 이상하게 그려집니다.
 	function canvasResize() {
-		canvas[0].height = $(window).height() - 50;
-		canvas[0].width = $(window).width() - 50;
+		canvas[0].width = $(div).width() ;
+		canvas[0].height = $(div).height() ;
 	}
 	// pc에서 서명을 할 경우 사용되는 이벤트입니다.
 	function draw(e) {
@@ -117,3 +117,23 @@
 		}
 	}
 })());
+
+
+var clearSign = function(id){
+
+	var canvas = $('#'+id);
+	var context = canvas.get(0).getContext('2d');
+
+	context.fillStyle = 'rgb(255, 0, 0)';
+	context.fillRect(40, 40, 100, 100);
+
+	context.beginPath();
+	context.arc(230, 90, 50, 0, Math.PI * 2, false);
+	context.closePath();
+	context.fill();
+
+	canvas.attr('width', canvas.width());
+	canvas.attr('height', canvas.height());
+
+}
+

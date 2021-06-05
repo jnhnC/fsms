@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hyunjin.fsms.repository.CmMapper">
+
+
+    <select id="fspZSoS01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZSO_S01 (#{soNo}) }
+        ]]>
+    </select>
+
+    <select id="fspZSoS02" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZSO_S02 (#{soNo}) }
+        ]]>
+    </select>
+
+
+    <select id="fspZSosS01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZSOS_S01 (#{page},#{bpCd},#{startDate},#{endDate}) }
+        ]]>
+    </select>
+
+     <select id="fspZSosS02" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZSOS_S02 (#{page},#{bpCd},#{startDate},#{endDate}) }
+        ]]>
+    </select>
+
+
+   	<select id="fspZAmtS01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZAMT_S01 (#{soldToParty},#{hsType},#{itemCd}) }
+        ]]>
+    </select>
+
+   	<select id="fspZpayU01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZPAY_U01 (
+				#{soNo},
+				#{seq},
+				#{payType},
+				#{billAmt},
+				#{cardAppNo},
+				#{orderNo},
+				#{cancelOrderNo},
+				#{payStatus},
+				#{uuid},
+				#{empNo}
+			)}
+        ]]>
+    </select>
+
+
+	<select id="fspZpayS01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZPAY_S01 (#{soNo})}
+        ]]>
+    </select>
+
+    	<select id="fspZimgI01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZIMG_I01 (#{soNo},#{empNo},#{programId},#{filename},#{fileSize},#{filePath},#{gubun})}
+        ]]>
+    </select>
+
+	<select id="fspZbminorS01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZBMINOR_S01 (#{bMajorCd})}
+        ]]>
+    </select>
+
+   	<select id="fspZimgS01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZIMG_S01 (#{soNo})}
+        ]]>
+    </select>
+
+   	<select id="fspZimgD01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZIMG_D01 (#{imageId})}
+        ]]>
+    </select>
+
+   	<select id="fspZmmsI01" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZMMS_I01 (#{hp},#{message},#{sndNum},#{mgNo},#{prgmId},#{empNo})}
+        ]]>
+    </select>
+
+   	<select id="fspZptnS01" resultType="hashmap">
+        <![CDATA[
+			{ CALL HJW_TEST.dbo.FSP_ZPTN_S01 ()}
+        ]]>
+    </select>
+
+	<select id="fspZaddItemS" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{
+				CALL HJW_TEST..FSP_ZADD_ITEM_S ( #{soNo} )
+			}
+        ]]>
+    </select>
+
+    <select id="wspZzUserLogin" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+			{
+				CALL HJW_TEST..WSP_ZZ_USER_LOGIN ( #{id}, #{pw} )
+			}
+        ]]>
+    </select>
+
+
+</mapper>

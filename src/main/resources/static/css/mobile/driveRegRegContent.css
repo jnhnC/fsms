@@ -1,0 +1,36 @@
+@media screen and (max-width:1400px){
+	#driveRegRegContent{
+		min-width:360px;
+
+	}
+
+	#driveRegRegContent  .item:nth-child(3) table td{
+		height:30px;
+		padding:3px;
+	}
+
+
+	#driveRegRegContent  .item:nth-child(3) table .title{
+		width:120px;
+	}
+
+
+	#driveRegRegContent  .item:nth-child(3) table .value{
+		background-color:white;
+		text-align:center;
+	}
+
+
+
+}
+
+@media screen and (max-width:1020px){
+
+
+}
+
+
+
+@media screen and (max-width:768px){
+
+}

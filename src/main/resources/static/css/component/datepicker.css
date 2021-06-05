@@ -1,0 +1,47 @@
+
+/*  .datebox {
+	font-size:calc(0.26vw + 10.08pt);
+
+}
+ */
+ .datebox {
+	font-size: calc(0.26vw + 9.08pt);
+
+}
+
+ .datebox .datePickerbox {
+	width:200px;
+
+}
+
+ .datebox input {
+	font-size: calc(0.26vw + 10.08pt);
+
+}
+
+ .datebox select {
+	font-size: calc(0.26vw + 10.08pt);
+/* 	width:70px; */
+
+}
+
+
+
+
+/*  .datebox input{
+ 	border:0px;
+ 	text-align:center;
+}
+
+ */
+/*  .datebox #date-icon{
+ 	z-index: 3;
+	position:relative;
+ 	top:13px;
+ 	left:-30px;
+}
+ */
+/* .datepicker table {
+	font-size:calc(0.26vw + 10.08pt);
+}
+ */

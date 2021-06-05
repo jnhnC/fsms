@@ -1,14 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link href="/css/mobile/tableList.css" rel="stylesheet">
-<link href="/css/mobile/search.css" rel="stylesheet">
-<link href="/css/mobile/selectSearch.css" rel="stylesheet">
-<link href="/css/mobile/tab.css" rel="stylesheet">
-<link href="/css/mobile/buttonbar.css" rel="stylesheet">
+<link href="/css/component/tableList.css" rel="stylesheet">
+<link href="/css/component/search.css" rel="stylesheet">
+<link href="/css/component/selectSearch.css" rel="stylesheet">
+<link href="/css/component/tab.css" rel="stylesheet">
+<link href="/css/component/buttonbar.css" rel="stylesheet">
 
 <script src="/js/selectSearch.js"></script>
 <script src="/js/tab.js"></script>
@@ -16,7 +15,7 @@
 <link href="/css/mobile/productSearchContent.css" rel="stylesheet">
 
 
-<div id="productSearchContent" style="white-space: nowrap;">
+<div id="productSearchContent" >
 
 	<div class="item"> <!--1  -->
 		<%-- <jsp:include page="header.jsp" flush="false" /> --%>
@@ -25,14 +24,16 @@
 	<div class="item"><!--2  -->
 		<div id="mobile-buttonbar" >
 			<div class="item" >
-				<i class="bi bi-chevron-left"></i>
+				<!-- <i class="bi bi-chevron-left"></i> -->
 			</div>
 
 			<div class="item">
 				<div class="dropdown">
-					<input type="text" class="drop3btn form-control " placeholder="경기본부"
-						onclick="" onkeyup="filterFunction(this)">
-					<i class="down-icon bi bi-caret-down-fill"></i>
+					<div class="dropdown-input">
+						<input type="text" class="drop3btn form-control " placeholder="경기본부"
+							onclick="" onkeyup="filterFunction(this)">
+						<i class="down-icon bi bi-caret-down-fill"></i>
+					</div>
 					<div id="" class="dropdown-content">
 						<a href="#about">본인상</a>
 						<a href="#base">부친상</a>
@@ -62,6 +63,7 @@
 		<div id="mobile-search" class="">
 			<div class="title">
 				<div>검색조건</div>
+				<div class="hideButton"><i class="bi bi-caret-up-fill"></i></div>
 			</div>
 			<div class="table-box">
 				<table>
@@ -69,11 +71,15 @@
 						<tr>
 							<td colspan="2" style="border-left: 0px;">
 								<div class="dropbox">
-									<span>고객사</span>
+									<div class="table-title">
+										<span>고객사</span>
+									</div>
 									<div class="dropdown">
-									<input type="text" id="" class="drop3btn form-control " placeholder="고객사"
-										onclick="" onkeyup="filterFunction(this)">
-									<i class="down-icon bi bi-caret-down-fill"></i>
+									<div class="dropdown-input">
+										<input type="text" id="" class="drop3btn form-control " placeholder="고객사"
+											onclick="" onkeyup="filterFunction(this)">
+										<i class="down-icon bi bi-caret-down-fill"></i>
+									</div>
 									<div id="" class="dropdown-content">
 										<a href="#about">본인상</a>
 										<a href="#base">부친상</a>
@@ -87,11 +93,15 @@
 						<tr>
 							<td style="border-left: 0px;">
 							<div class="dropbox">
-								<span>경조사유</span>
+								<div class="table-title">
+									<span>경조사유</span>
+								</div>
 								<div class="dropdown">
-								<input type="text" id="" class="drop3btn form-control " placeholder="경조사유"
-									onclick="" onkeyup="filterFunction(this)">
-								<i class="down-icon bi bi-caret-down-fill"></i>
+								<div class="dropdown-input">
+									<input type="text" id="" class="drop3btn form-control " placeholder="경조사유"
+										onclick="" onkeyup="filterFunction(this)">
+									<i class="down-icon bi bi-caret-down-fill"></i>
+								</div>
 								<div id="" class="dropdown-content">
 									<a href="#about">본인상</a>
 									<a href="#base">부친상</a>
@@ -104,11 +114,15 @@
 							</td>
 							<td style="border-right: 0px;">
 								<div class="dropbox">
-									<span>품목</span>
+									<div class="table-title">
+										<span>품목</span>
+									</div>
 									<div class="dropdown">
-									<input type="text" id="" class="drop3btn form-control " placeholder="품목"
-										onclick="" onkeyup="filterFunction(this)">
-									<i class="down-icon bi bi-caret-down-fill"></i>
+									<div class="dropdown-input">
+										<input type="text" id="" class="drop3btn form-control " placeholder="품목"
+											onclick="" onkeyup="filterFunction(this)">
+										<i class="down-icon bi bi-caret-down-fill"></i>
+									</div>
 									<div id="" class="dropdown-content">
 										<a href="#about">본인상</a>
 										<a href="#base">부친상</a>
@@ -224,5 +238,11 @@
 </div>
 <script>
 $('#menu-nav').html("상품조회")
+
+$('#mobile-search>.title').click(function(){
+	$(this).next('.table-box').slideToggle(100);
+ 	$('.hideButton i').toggleClass("rotate");
+});
+
 
 </script>

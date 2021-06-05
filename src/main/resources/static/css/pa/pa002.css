@@ -1,0 +1,71 @@
+#paRegContent {
+	/* 	width: 100%; */
+	/* min-width:768px; */
+	min-width: 360px;
+}
+
+#paRegContent #mobile-search tr:nth-child(1) span {
+	width: 40px;
+}
+
+#paRegContent>.item:nth-child(6) {
+	display: flex;
+	font-size: calc(0.26vw + 10.08pt);
+}
+
+#paRegContent>.item:nth-child(6) .tab-content td {
+	font-size: calc(0.26vw + 10.08pt);
+}
+
+#paRegContent>.item:nth-child(6) .tab-content #tab1 .table-content {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+#paRegContent>.item:nth-child(6) .tab-content #tab1 .table-content .mobile-result:nth-child(1)
+	{
+	min-width: 360px;
+	width: 48%;
+}
+
+#paRegContent>.item:nth-child(6) .tab-content #tab1 .table-content .mobile-result:nth-child(2)
+	{
+	min-width: 360px;
+	width: 48%;
+}
+
+#paRegContent>.item:nth-child(6) .tab-content #tab2 .table-content {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#paRegContent>.item:nth-child(6) .tab-content #tab2 .table-content .mobile-result:nth-child(1)
+	{
+	min-width: 48%;
+	width: 48%;
+}
+
+#paRegContent>.item:nth-child(6) .tab-content #tab2 .table-content .mobile-result:nth-child(2)
+	{
+	min-width: 48%;
+	width: 48%;
+}
+
+#paRegContent .backcolor{
+	background-color: #E8F5FF;
+}
+
+#paRegContent .statusD{
+	background-color: #FFF0F5;
+}
+
+@media all and (min-width:1024px) {
+}
+@media screen and (max-width:1020px) {
+}
+@media screen and (max-width:767px) {
+}

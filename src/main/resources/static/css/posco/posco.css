@@ -1,0 +1,185 @@
+	#posco{
+		font-size:4pt;
+		text-align:center;
+		width:100%;
+	}
+
+	#posco img{
+		width:70%;
+	}
+
+
+	#posco #phone {
+		width: 70%;
+		padding: 10px 0px;
+		padding-right: 20px;
+	}
+
+
+	#posco #phoneImg{
+		width:190px;
+	}
+
+	#posco #videoBox{
+		width:70%
+	}
+
+	#posco #video{
+		width:420px;
+
+	}
+
+
+	#posco #menubar{
+		width:70%;
+		height:60px;
+	}
+
+	#posco #menubar img{
+		width:90%;
+	}
+
+
+	#posco #menubar div{
+		text-align: right;
+
+
+	}
+
+
+	#posco .cursor{
+		cursor: pointer
+	}
+
+
+
+	#posco .fixed{
+		position: fixed;
+		left: 50%;
+   		transform: translate(-50%, 0);
+		top:0px;
+		background: white;
+		border:2px solid white;
+		/* background-color:lightgray; */
+	    width: 71% !important;
+	}
+
+
+
+
+	#posco #homeImg{
+		width:8%;
+		position: relative;
+		z-index:3;
+	/* 	bottom:70px;
+		right:200px; */
+		/* bottom:240%; */
+		top:-70px;
+		right:13%;
+
+	}
+
+
+	#posco #sidebox {
+		position: absolute;
+		width: 40px;
+		bottom: 15px;
+		right: 20px;
+		font-size:14pt;
+		padding: 3px 10px;
+	}
+
+	#posco .fixedTop{
+		position: fixed !important;
+	}
+
+/* PC (해상도 1024px)*/
+@media all and (min-width:1024px) {
+
+}
+
+@media ( max-width: 1023px ) {
+}
+@media ( max-width: 780px ) {
+
+#posco{
+	font-size:4pt;
+	text-align:center;
+	width:100%;
+	}
+
+	#posco img{
+		width:70%;
+	}
+
+	#posco #phone{
+		width:70%;
+		padding:2px 0px;
+		padding-right:10px;
+	}
+
+	#posco #logoImg{
+		padding-top:5px;
+	}
+
+	#posco #phoneImg{
+		width:40px;
+
+	}
+
+	#posco #videoBox{
+		width:70%
+	}
+
+	#posco #video{
+		width:200px;
+	}
+
+
+	#posco #menubar{
+		width:70%;
+		height:25px;
+	}
+
+	#posco #menubar div{
+		text-align: right;
+
+
+	}
+
+
+	#posco .cursor{
+		cursor: pointer
+	}
+
+
+
+	#posco .fixed{
+		position: fixed;
+		top:0px;
+		background: white;
+		/* background-color:lightgray; */
+		width:70%;
+	}
+
+
+
+	#posco #homeImg{
+		width:30px;
+		position: relative;
+		top:-24px;
+		left:-60px;
+		z-index:99;
+	}
+
+
+	#posco #sidebox {
+		position: absolute;
+		width: 40px;
+		bottom: 15px;
+		right: 20px;
+		padding: 3px 10px;
+		font-size:8pt;
+	}
+
+}
